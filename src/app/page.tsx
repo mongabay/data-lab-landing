@@ -1,9 +1,11 @@
-import Image from "next/image";
+import Intro from "@/containers/intro";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className=""></div>
+    <main className="min-h-screen bg-white">
+      <Intro />
+
+      <div className="h-[500vh]"></div>
     </main>
   );
 }
