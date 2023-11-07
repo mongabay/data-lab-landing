@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "dark-gray": "#222"
+        "dark-gray": "#222",
       },
       fontFamily: {
         open: ["var(--font-open)"],
