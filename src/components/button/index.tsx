@@ -12,7 +12,7 @@ const Button = ({ children, className, ...buttonProps }: ButtonProps) => {
   return (
     <button
       type="button"
-      className={cx("rounded-3xl text-white px-5 py-2.5", className)}
+      className={cx("rounded-3xl px-5 py-2.5", className)}
       {...buttonProps}
     >
       {children}

@@ -1,41 +1,57 @@
-import cx from "classnames";
-import Button from "@/components/button";
-import { TOOLS } from "./constants";
 import Image from "next/image";
+import cx from "classnames";
+
+import Button from "@/components/button";
+import { TOOLS } from "@/constants";
+import Icon from "@/components/icon";
 
 const Tools = () => {
   return (
-    <div className="max-w-5xl mx-auto text-dark-gray">
-      {TOOLS.map(({ color, image, description, title, icon }, index) => {
+    <div className="container text-dark-gray">
+      {TOOLS.map(({ color, image, description, title, icon, url }, index) => {
         return (
-          <div className="h-screen flex items-center gap-12" key={title}>
+          <div
+            className="min-h-screen mb-10 sm:mb-0 flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12"
+            key={title}
+          >
             <div
               className={cx("max-w-sm space-y-6 font-open", {
-                "order-2": index % 2 !== 0,
-                "order-1": index % 2 === 0,
+                "sm:order-2": index % 2 !== 0,
+                "sm:order-1": index % 2 === 0,
               })}
             >
-              <h2 className="text-6xl font-cardo leading-tight max-w-xs">
+              <h2 className="text-5xl sm:text-6xl font-cardo leading-tight max-w-xs">
                 {title}
               </h2>
-              <p className="text-lg">{description}</p>
+              <p className=" sm:text-lg">{description}</p>
               <Button
                 style={{
                   backgroundColor: color,
                 }}
-                className="text-sm"
+                className="text-sm text-white relative z-10"
               >
-                Explore charts
+                <a target="_blank" rel="noopener noreferrer" href={url}>
+                  Explore charts
+                </a>
               </Button>
               <div
-                className={cx("absolute z-0", {
-                  "-translate-y-2/3 translate-x-[85%] ": index === 0,
-                  "-translate-y-full translate-x-1/3 ": index === 1,
-                  "-translate-y-[85%] translate-x-[90%] ": index === 2,
-                  "-translate-y-[150%] translate-x-1/2 ": index === 3,
-                })}
+                className={cx(
+                  "absolute z-0 -translate-y-[125%] sm:right-auto -right-0",
+                  {
+                    "sm:-translate-y-2/3 sm:translate-x-[85%] ": index === 0,
+                    "sm:-translate-y-full sm:translate-x-1/3 ": index === 1,
+                    "sm:-translate-y-[85%] sm:translate-x-[90%] ": index === 2,
+                    "sm:-translate-y-[150%] sm:translate-x-1/2 ": index === 3,
+                  }
+                )}
               >
-                <Image width={253} height={253} src={icon} alt={title} />
+                <Icon
+                  style={{
+                    fill: color,
+                  }}
+                  className="w-[253px] h-[253px] opacity-10"
+                  icon={icon}
+                />
               </div>
             </div>
             <div
