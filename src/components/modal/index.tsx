@@ -28,7 +28,7 @@ const Modal = ({
           "fixed top-0 left-0 w-screen h-screen flex flex-col": size === "full",
         })}
       >
-        <div className="absolute w-full flex justify-between p-9">
+        <div className="w-full flex justify-between p-9">
           <Dialog.Title className="DialogTitle">{title}</Dialog.Title>
           <Dialog.Close asChild>
             <button
@@ -39,7 +39,9 @@ const Modal = ({
             </button>
           </Dialog.Close>
         </div>
-        <Dialog.Content className="flex-1">{children}</Dialog.Content>
+        <Dialog.Content className="relative h-[calc(100%-32px)] !pointer-events-auto">
+          {children}
+        </Dialog.Content>
       </Dialog.Content>
     </Dialog.Portal>
   </Dialog.Root>

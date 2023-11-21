@@ -10,6 +10,7 @@ import Button from "@/components/button";
 
 import Icon from "@/components/icon";
 import ArrowIcon from "@/styles/icons/blog-arrow.svg?sprite";
+import { getData } from "../../utils";
 
 type BlogPosts = {
   isLoading: boolean;
@@ -23,55 +24,36 @@ const initialData = {
   posts: [],
 };
 
+// Number of posts to show initially
 const INITIAL_MAX_POSTS = 5;
+// Max number of posts to load (initial max posts + 3 posts by row * 3 rows)
+const MAX_POSTS = INITIAL_MAX_POSTS + 3 * 2;
 
-const Blog = () => {
-  const [data, setData] = useState<BlogPosts>(initialData);
+type BlogProps = {
+  posts: {
+    data: CardProps[];
+    isError: boolean;
+  };
+};
+
+const Blog = ({ posts }: BlogProps) => {
   const [maxPosts, setMaxPosts] = useState(INITIAL_MAX_POSTS);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setData((prevState) => ({
-        isLoading: true,
-        isError: false,
-        posts: prevState.posts,
-      }));
+  const loadMore = maxPosts < MAX_POSTS && !posts.isError;
 
-      try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts"
-        );
+  const POSTS = useMemo(() => {
+    return posts.data.slice(0, maxPosts);
+  }, [posts, maxPosts]);
 
-        const posts = await response.json();
-
-        // setData({ isLoading: false, isError: false, posts });
-        setData({
-          isLoading: false,
-          isError: false,
-          posts: posts.slice(0, maxPosts).map((post: any) => ({
-            title: post.title,
-            description: post.body,
-            date: new Date().toISOString(),
-            image: "/images/card-example.png",
-          })),
-        });
-      } catch (error) {
-        setData({ isLoading: false, isError: true, posts: [] });
-      }
-    };
-    fetchData();
-  }, [maxPosts]);
-
-  const loadingPosts = useMemo(() => {
-    if (data.isLoading) {
-      return Array.from({ length: maxPosts - data.posts.length }).fill(0);
+  const handleClickMore = () => {
+    if (loadMore) {
+      setMaxPosts(maxPosts + 3);
     }
-    return [];
-  }, [data.isLoading, data.posts.length, maxPosts]);
+  };
 
   return (
-    <div className="pb-32 border-b border-b-light-gray">
-      <div className="bg-primary-green sm:gap-0 gap-6 justify-center flex sm:flex-row flex-col items-center text-white min-h-screen">
+    <div className="pb-32border-b border-b-light-gray">
+      <div className="bg-primary-green pt-9 sm:pt-0  sm:gap-0 gap-6 sm:justify-center flex sm:flex-row flex-col sm:items-center text-white sm:min-h-screen pb-28 sm:pb-0">
         <div className="container w-full sm:h-1/2 space-y-8">
           <h2 className="text-5xl sm:text-6xl font-cardo">
             How can you use them?
@@ -84,13 +66,13 @@ const Blog = () => {
         <div className="sm:absolute sm:translate-x-[130%]">
           <Icon
             icon={ArrowIcon}
-            className="w-[118px] h-[143px] sm:w-[237px] sm:h-[286px]"
+            className="w-[98px] h-[117px] mt-5 ml-5 sm:ml-0 sm:mt-0 sm:w-[237px] sm:h-[286px]"
           />
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="grid sm:grid-cols-12 gap-x-5 gap-y-20 sm:gap-y-16 sm:-translate-y-32 -translate-y-24">
-          {data.posts?.map((item, index) => (
+        <div className="grid sm:grid-cols-12 gap-x-5 gap-y-20 sm:gap-y-16 sm:-translate-y-32 -translate-y-20">
+          {POSTS?.map((item, index) => (
             <div
               key={item.title}
               className={cx({
@@ -102,20 +84,32 @@ const Blog = () => {
               <Card {...item} />
             </div>
           ))}
-          {loadingPosts.map((item, index) => (
-            <div
-              key={index}
-              className="col-span-4 row-span-3 animate-pulse bg-gray-200"
-            ></div>
-          ))}
         </div>
       </div>
       <div className="flex justify-center">
         <Button
-          className="bg-white text-dark-gray border border-dark-gray"
-          onClick={() => setMaxPosts(maxPosts + 3)}
+          className={cx(
+            maxPosts < MAX_POSTS
+              ? "bg-white text-dark-gray border border-dark-gray"
+              : "bg-primary-green text-white",
+            {
+              "-translate-y-20 sm:-translate-y-40 text-dark-gray border-none":
+                posts.isError,
+            }
+          )}
+          onClick={handleClickMore}
         >
-          Load more
+          {maxPosts < MAX_POSTS && !posts.isError ? (
+            "Load more"
+          ) : (
+            <a
+              href="https://www.mongabay.com/list/data-lab/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Go to Mongabay Data Lab News
+            </a>
+          )}
         </Button>
       </div>
     </div>

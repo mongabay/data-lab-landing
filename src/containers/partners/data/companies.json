@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Trase",
+    "link": "https://www.trase.earth/",
+    "image": "/images/trase-logo.png"
+  },
+  {
+    "name": "Vizzuality",
+    "link": "https://www.vizzuality.com/",
+    "image": "/images/vizzuality-logo.png"
+  },
+  {
+    "name": "WRI",
+    "link": "https://www.wri.org/",
+    "image": "/images/wri-logo.png"
+  },
+  {
+    "name": "Mongabay",
+    "link": "https://mongabay.org/",
+    "image": "/images/mongabay-logo.png",
+    "style": { "filter": "invert(1)" }
+  }
+]

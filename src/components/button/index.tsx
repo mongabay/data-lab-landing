@@ -8,11 +8,20 @@ const BUTTON_TYPE = {
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {};
 
-const Button = ({ children, className, ...buttonProps }: ButtonProps) => {
+const Button = ({
+  children,
+  className,
+  disabled,
+  ...buttonProps
+}: ButtonProps) => {
   return (
     <button
       type="button"
-      className={cx("rounded-3xl px-5 py-2.5", className)}
+      className={cx(
+        "rounded-3xl px-5 py-2.5",
+        className,
+        disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+      )}
       {...buttonProps}
     >
       {children}

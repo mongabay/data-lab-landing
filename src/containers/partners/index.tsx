@@ -1,76 +1,31 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Button from "@/components/button";
 import { Partner } from "@/types/partner";
 
-import Card from "./card";
+import PeopleCard from "./cards/people";
+import CompanyCard from "./cards/company";
 import PartnersDetails from "./details";
 
-type PartnersData = {
-  isLoading: boolean;
-  isError: boolean;
-  posts: Partner[];
-};
+import PEOPLE from "./data/people.json";
+import COMPANIES from "./data/companies.json";
 
-const initialData = {
-  isLoading: false,
-  isError: false,
-  posts: [],
-};
-
-const INITIAL_MAX_PARTNERS = 6;
+const INITIAL_MAX_PARTNERS = 3;
 
 const Partners = () => {
-  const [data, setData] = useState<PartnersData>(initialData);
   const [maxPartners, setMaxPartners] = useState(INITIAL_MAX_PARTNERS);
   const [details, setDetails] = useState<Partner | null>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setData((prevState) => ({
-        isLoading: true,
-        isError: false,
-        posts: prevState.posts,
-      }));
+  const peopleData = useMemo(() => PEOPLE.slice(0, maxPartners), [maxPartners]);
 
-      try {
-        // MOCKUP
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/comments"
-        );
-
-        const postsResponse = await response.json();
-        const posts = postsResponse.slice(0, maxPartners).map((post: any) => ({
-          name: post.name.split(" ").slice(0, 2).join(" "),
-          role: post.body.split(" ")[0],
-          company: post.name.split(" ").slice(2, 4).join(" "),
-          image: "",
-          description: post.body,
-        }));
-
-        setData({
-          isLoading: false,
-          isError: false,
-          posts,
-        });
-        // MOCKUP
-
-        // REAL
-        // setData({ isLoading: false, isError: false, posts });
-      } catch (error) {
-        setData({ isLoading: false, isError: true, posts: [] });
-      }
-    };
-    fetchData();
-  }, [maxPartners]);
-
-  const loadingPartners = useMemo(() => {
-    if (data.isLoading) {
-      return Array.from({ length: maxPartners - data.posts.length }).fill(0);
+  const handleLoadMore = () => {
+    let nextMaxPartners = maxPartners + 3;
+    if (nextMaxPartners > PEOPLE.length) {
+      nextMaxPartners = PEOPLE.length;
     }
-    return [];
-  }, [data.isLoading, data.posts.length, maxPartners]);
+    setMaxPartners(nextMaxPartners);
+  };
 
   return (
     <div className="py-20 container mx-auto">
@@ -83,30 +38,38 @@ const Partners = () => {
           consectetur. Dictum blandit morbi in viverra purus.
         </p>
       </div>
+
       <div className="mt-32">
-        <div className="grid sm:grid-cols-3 gap-y-28">
-          {data.posts.map((post) => (
-            <div
-              role="button"
-              key={post.name}
-              className="col-span-1 flex justify-center"
-              onClick={() => setDetails(post)}
-            >
-              <Card {...post} />
+        <div className="mb-5">
+          <h3 className="font-semibold text-sm">Companies</h3>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-y-14 gap-x-5">
+          {COMPANIES.map((p) => (
+            <div key={p.name}>
+              <CompanyCard {...p} />
             </div>
           ))}
-          {loadingPartners.map((item, index) => (
-            <div
-              key={index}
-              className="col-span-1 flex justify-center rounded-full animate-pulse bg-gray-200"
-            ></div>
+        </div>
+      </div>
+
+      <div className="mt-32">
+        <div className="mb-5">
+          <h3 className="font-semibold text-sm">People</h3>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-y-14 gap-x-5">
+          {peopleData.map((p) => (
+            <div role="button" key={p.name} onClick={() => setDetails(p)}>
+              <span className="sr-only">click to more details</span>
+              <PeopleCard {...p} />
+            </div>
           ))}
         </div>
       </div>
       <div className="flex justify-center mt-28">
         <Button
           className="bg-white text-dark-gray border border-dark-gray"
-          onClick={() => setMaxPartners(maxPartners + 3)}
+          onClick={handleLoadMore}
+          disabled={maxPartners >= PEOPLE.length}
         >
           Load more
         </Button>

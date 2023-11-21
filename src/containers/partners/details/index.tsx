@@ -2,7 +2,7 @@ import Icon from "@/components/icon";
 import Modal from "@/components/modal";
 import Image from "next/image";
 import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
-import InstagramIcon from "@/styles/icons/instagram.svg?sprite";
+import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg";
 import { Partner } from "@/types/partner";
 
 type PartnersDetailsProps = {
@@ -20,13 +20,14 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
       size="full"
     >
       <div className="flex justify-center items-center h-full gap-x-20">
-        <div className="w-[220px] h-[220px] rounded-full bg-[#EEEEEE] overflow-hidden flex justify-center items-center">
+        <div className="flex justify-center items-center">
           {details?.image ? (
             <Image
               src={details.image || "/images/partners-placeholder.svg"}
-              width={140}
-              height={140}
+              width={220}
+              height={220}
               alt={details.name}
+              className="w-[220px] h-[220px] rounded-full"
             />
           ) : (
             <Icon icon={PartnersPlaceholderIcon} className="w-14 h-14" />
@@ -38,15 +39,32 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
               {details?.name}
             </h3>
             <p>
-              {details?.role} <span className="text-white/20">|</span>
-              {details?.company}
+              {details?.role} <span className="text-white/20">|</span>{" "}
+              <a
+                href={details?.companyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-medium-gray"
+              >
+                {details?.company}
+              </a>
             </p>
           </div>
+          {details?.description && (
+            <div dangerouslySetInnerHTML={{ __html: details.description }} />
+          )}
           <div>
-            <p>{details?.description}</p>
-          </div>
-          <div>
-            <Icon icon={InstagramIcon} className="w-6 h-6 fill-white" />
+            <a
+              href={details?.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <Icon
+                icon={ArrowUpRightIcon}
+                className="w-5 h-5 fill-white stroke-white"
+              />
+            </a>
           </div>
         </div>
       </div>

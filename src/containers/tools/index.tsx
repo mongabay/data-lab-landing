@@ -20,15 +20,15 @@ const Tools = () => {
                 "sm:order-1": index % 2 === 0,
               })}
             >
-              <h2 className="text-5xl sm:text-6xl font-cardo leading-tight max-w-xs">
+              <h2 className="text-[32px] sm:text-6xl font-cardo leading-tight max-w-xs">
                 {title}
               </h2>
-              <p className=" sm:text-lg">{description}</p>
+              <p className="text-xs sm:text-lg">{description}</p>
               <Button
                 style={{
                   backgroundColor: color,
                 }}
-                className="text-sm text-white relative z-10"
+                className="text-xs sm:text-sm text-white relative z-10"
               >
                 <a target="_blank" rel="noopener noreferrer" href={url}>
                   Explore charts

@@ -69,12 +69,17 @@ const HeaderMenu = () => {
             ))}
           </ul>
           <div className="flex flex-1 items-end gap-3 font-semibold text-sm">
-            {/* TODO: add links */}
             <Button className="border border-dark-gray text-white bg-dark-gray">
-              Get in touch
+              <a href="mailto:info@mongabay.org">Get in touch</a>
             </Button>
             <Button className="border border-dark-gray text-dark-gray">
-              Find out more
+              <a
+                href="https://mongabay.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Find out more
+              </a>
             </Button>
           </div>
         </div>

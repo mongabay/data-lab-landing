@@ -1,7 +1,6 @@
-import { TOOLS } from "@/constants";
 import Image from "next/image";
-import InstagramIcon from "@/styles/icons/instagram.svg?sprite";
-import Icon from "@/components/icon";
+
+import { TOOLS } from "@/constants";
 
 const Footer = () => {
   return (
@@ -34,9 +33,19 @@ const Footer = () => {
         </div>
         <div className="font-semibold space-y-2 flex-0">
           <p>Follow us on:</p>
-          {/* TODO: add instagram link */}
-          <a href="#">
-            <Icon className="w-6 h-6 fill-white" icon={InstagramIcon} />
+          <a
+            href="https://www.linkedin.com/company/mongabay/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Image
+              className="w-6 h-6 fill-white stroke-white"
+              src="/images/linkedin.svg"
+              width={24}
+              height={24}
+              alt="linkedin"
+            />
           </a>
         </div>
       </div>
