@@ -29,14 +29,17 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
           width={300}
           height={300}
         />
-        <Button className="hidden sm:block transition-all duration-300 absolute group-hover:opacity-100 opacity-0 bg-white text-dark-gray">
-          <a href={url} target="_blank" rel="noopener noreferrer">
+        <Button
+          className="hidden sm:block transition-all duration-300 absolute group-hover:opacity-100 focus-within:opacity-100 opacity-0 bg-white text-dark-gray"
+          href={url}
+        >
+          <>
             Go to article
             <Icon
               className="inline-block w-2.5 h-2.5 ml-3"
               icon={ArrowUpRightIcon}
             />
-          </a>
+          </>
         </Button>
       </div>
       <p className="text-medium-gray font-open text-base">{dateText}</p>
@@ -47,19 +50,17 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
         className="leading-relaxed text-xs sm:text-base  line-clamp-3"
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <Button className="sm:hidden block px-0 transition-all duration-300 bg-white text-dark-gray">
-        <a
-          className="underline text-xs font-semibold"
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <Button
+        target="_blank"
+        className="sm:hidden block pl-0 transition-all duration-300 bg-white text-dark-gray underline text-xs font-semibold"
+      >
+        <>
           Go to article
           <Icon
             className="inline-block w-2.5 h-2.5 ml-3"
             icon={ArrowUpRightIcon}
           />
-        </a>
+        </>
       </Button>
     </div>
   );

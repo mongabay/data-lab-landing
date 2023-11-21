@@ -2,7 +2,7 @@
 
 import cx from "classnames";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Card from "./card";
 
 import type { CardProps } from "./card";
@@ -10,19 +10,6 @@ import Button from "@/components/button";
 
 import Icon from "@/components/icon";
 import ArrowIcon from "@/styles/icons/blog-arrow.svg?sprite";
-import { getData } from "../../utils";
-
-type BlogPosts = {
-  isLoading: boolean;
-  isError: boolean;
-  posts: CardProps[];
-};
-
-const initialData = {
-  isLoading: false,
-  isError: false,
-  posts: [],
-};
 
 // Number of posts to show initially
 const INITIAL_MAX_POSTS = 5;
@@ -93,23 +80,18 @@ const Blog = ({ posts }: BlogProps) => {
               ? "bg-white text-dark-gray border border-dark-gray"
               : "bg-primary-green text-white",
             {
-              "-translate-y-20 sm:-translate-y-40 text-dark-gray border-none":
+              "-translate-y-20 sm:-translate-y-40  border border-white":
                 posts.isError,
             }
           )}
+          href={
+            !loadMore ? "https://www.mongabay.com/list/data-lab/" : undefined
+          }
           onClick={handleClickMore}
         >
-          {maxPosts < MAX_POSTS && !posts.isError ? (
-            "Load more"
-          ) : (
-            <a
-              href="https://www.mongabay.com/list/data-lab/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Go to Mongabay Data Lab News
-            </a>
-          )}
+          {maxPosts < MAX_POSTS && !posts.isError
+            ? "Load more"
+            : "Go to Mongabay Data Lab News"}
         </Button>
       </div>
     </div>

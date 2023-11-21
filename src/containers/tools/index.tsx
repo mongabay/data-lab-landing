@@ -28,11 +28,10 @@ const Tools = () => {
                 style={{
                   backgroundColor: color,
                 }}
+                href={url}
                 className="text-xs sm:text-sm text-white relative z-10"
               >
-                <a target="_blank" rel="noopener noreferrer" href={url}>
-                  Explore charts
-                </a>
+                Explore charts
               </Button>
               <div
                 className={cx(

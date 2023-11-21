@@ -33,10 +33,11 @@ const HeaderMenu = () => {
             "translate-x-full": !isOpen,
           }
         )}
+        {...(!isOpen && { inert: "" })}
       >
         <div className="lg:min-w-[510px] w-screen sm:w-auto pt-8 sm:pt-12 pb-20 sm:px-24 items-center sm:items-start h-full flex flex-col gap-[60px]">
           <button
-            className="self-end pr-4 sm:pr-0"
+            className="self-end pr-4 sm:pr-0 focus-visible:outline-primary-green focus-visible:outline-offset-4 rounded-full"
             onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">close navigation menu</span>
@@ -50,7 +51,7 @@ const HeaderMenu = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={url}
-                  className="flex gap-4 items-center uppercase font-open font-semibold hover:underline"
+                  className="flex gap-4 items-center uppercase font-open font-semibold hover:underline focus-visible:outline-primary-green focus-visible:outline-offset-4 rounded-3xl"
                 >
                   <div
                     className="flex items-center justify-center w-10 h-10 rounded-full"
@@ -69,17 +70,17 @@ const HeaderMenu = () => {
             ))}
           </ul>
           <div className="flex flex-1 items-end gap-3 font-semibold text-sm">
-            <Button className="border border-dark-gray text-white bg-dark-gray">
-              <a href="mailto:info@mongabay.org">Get in touch</a>
+            <Button
+              href="mailto:info@mongabay.org"
+              className="border border-dark-gray text-white bg-dark-gray"
+            >
+              Get in touch
             </Button>
-            <Button className="border border-dark-gray text-dark-gray">
-              <a
-                href="https://mongabay.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Find out more
-              </a>
+            <Button
+              href="https://mongabay.org/"
+              className="border border-dark-gray text-dark-gray"
+            >
+              Find out more
             </Button>
           </div>
         </div>

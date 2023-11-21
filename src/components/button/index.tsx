@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 import cx from "classnames";
 
 const BUTTON_TYPE = {
@@ -7,23 +7,38 @@ const BUTTON_TYPE = {
 };
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {};
+type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {};
 
 const Button = ({
   children,
   className,
-  disabled,
-  ...buttonProps
-}: ButtonProps) => {
+  ...props
+}: ButtonProps | AnchorProps) => {
+  const buttonProps = props as ButtonProps;
+  const aProps = props as AnchorProps;
+
+  const c = cx(
+    "inline-block rounded-3xl px-5 py-2.5 focus-visible:outline-primary-green focus-visible:outline-offset-4",
+    className,
+    buttonProps.disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+  );
+
+  if (aProps.href) {
+    return (
+      <a
+        href={aProps.href}
+        className={c}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...aProps}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      type="button"
-      className={cx(
-        "rounded-3xl px-5 py-2.5",
-        className,
-        disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-      )}
-      {...buttonProps}
-    >
+    <button type="button" className={c} {...buttonProps}>
       {children}
     </button>
   );

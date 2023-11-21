@@ -4,7 +4,7 @@ import { TOOLS } from "@/constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-green text-white font-open text-center sm:text-start">
+    <footer className="bg-primary-green text-white font-open">
       <div className="mx-auto w-full container flex sm:flex-row flex-col gap-y-6 sm:gap-0 justify-between py-11">
         <div className="flex-1">
           <Image
@@ -12,7 +12,7 @@ const Footer = () => {
             width={182}
             height={27}
             alt="logo"
-            className="object-contain mx-auto sm:mx-0"
+            className="object-contain"
           />
         </div>
         <div className="flex-[2]">
@@ -37,7 +37,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/mongabay/"
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
+            className="mt-2 inline-block"
           >
             <Image
               className="w-6 h-6 fill-white stroke-white"
