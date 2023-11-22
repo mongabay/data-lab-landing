@@ -43,7 +43,7 @@ const Partners = () => {
         <div className="mb-5">
           <h3 className="font-semibold text-sm">Companies</h3>
         </div>
-        <div className="grid sm:grid-cols-3 gap-y-14 gap-x-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
           {COMPANIES.map((p) => (
             <div key={p.name}>
               <CompanyCard {...p} />

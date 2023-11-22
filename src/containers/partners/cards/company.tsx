@@ -4,10 +4,11 @@ import cx from "classnames";
 import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
 import { Company } from "@/types/partner";
 import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg?sprite";
+import Button from "@/components/button";
 
-const Card = ({ name, image, link, style }: Company) => {
+const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) => {
   return (
-    <div className="animate-in duration-700 fade-in text-dark-gray text-base font-open flex flex-col items-center justify-between w-full py-5 px-10 min-h-[280px] border border-light-gray">
+    <div className="animate-in duration-700 fade-in text-dark-gray text-base font-open flex flex-col items-center justify-between w-full p-5 pt-10 min-h-[280px] border border-light-gray">
       <div
         className={cx(
           "transition-color duration-300 w-full",
@@ -16,10 +17,9 @@ const Card = ({ name, image, link, style }: Company) => {
       >
         {image ? (
           <Image
-            className="object-cover w-full"
             src={image}
-            width={329}
-            height={220}
+            width={imageWidth}
+            height={imageHeight}
             alt={name}
             style={{ ...style }}
           />
@@ -28,12 +28,10 @@ const Card = ({ name, image, link, style }: Company) => {
         )}
       </div>
       <div className="mt-6 flex items-center justify-between w-full">
-        <h3 className="font-cardo text-[28px] leading-tight capitalize">
-          {name.toLowerCase()}
-        </h3>
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <Button href={link} className="w-full !p-0 flex justify-between items-center font-cardo text-[28px] leading-tight">
+          {name}
           <Icon icon={ArrowUpRightIcon} className="w-5 h-5" />
-        </a>
+        </Button>
       </div>
     </div>
   );

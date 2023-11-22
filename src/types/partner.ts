@@ -13,6 +13,8 @@ export type Partner = {
 export type Company = {
     name: string;
     image: string;
+    imageWidth: number;
+    imageHeight: number;
     link: string;
     style?: CSSProperties;
 }
