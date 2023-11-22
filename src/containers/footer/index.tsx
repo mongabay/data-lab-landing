@@ -5,7 +5,7 @@ import { TOOLS } from "@/constants";
 const Footer = () => {
   return (
     <footer className="bg-primary-green text-white font-open">
-      <div className="mx-auto w-full container flex sm:flex-row flex-col gap-y-6 sm:gap-0 justify-between py-11">
+      <div className="mx-auto w-full container flex sm:flex-row flex-col gap-y-6 gap-x-8 sm:gap-y-0 lg:gap-x-0 justify-between py-11">
         <div className="flex-1">
           <Image
             src="/images/mongabay-logo.png"
@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
       <div className="bg-primary-green-dark">
         <p className="container mx-auto py-3 font-light text-sm">
-          <span className="text-lg font-bold">©</span> Mongabay 2022
+          <span className="text-lg font-bold">©</span> Mongabay 2023
         </p>
       </div>
     </footer>
