@@ -43,9 +43,9 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
         </Button>
       </div>
       <p className="text-medium-gray font-open text-base">{dateText}</p>
-      <h3 className="text-2xl sm:text-[28px] font-cardo leading-tight">
+      <div className="text-2xl sm:text-[28px] font-cardo leading-tight">
         {title}
-      </h3>
+      </div>
       <div
         className="leading-relaxed text-xs sm:text-base  line-clamp-3"
         dangerouslySetInnerHTML={{ __html: description }}
