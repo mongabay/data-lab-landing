@@ -49,10 +49,12 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
       <div
         className="leading-relaxed text-xs sm:text-base  line-clamp-3"
         dangerouslySetInnerHTML={{ __html: description }}
+        {...({ inert: '' })}
       />
       <Button
         target="_blank"
         className="sm:hidden block pl-0 transition-all duration-300 bg-white text-dark-gray underline text-xs font-semibold"
+        href={url}
       >
         <>
           Go to article
