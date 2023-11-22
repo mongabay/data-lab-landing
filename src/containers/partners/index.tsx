@@ -28,14 +28,14 @@ const Partners = () => {
   };
 
   return (
-    <div className="py-20 container mx-auto">
+    <div className="py-20 container mx-auto text-dark-gray">
       <div className="space-y-8">
-        <h2 className="max-w-xl font-cardo text-dark-gray text-6xl">
+        <h2 className="max-w-xl font-cardo text-6xl">
           People and partner companies
         </h2>
         <p className="max-w-md">
-          Behind the Mongabay tools there is lorem ipsum dolor sit amet
-          consectetur. Dictum blandit morbi in viverra purus.
+          Discover our team and trusted partner companies. At the core of our accomplishments are
+          the dedicated individuals who bring expertise and commitment to every project.
         </p>
       </div>
 
