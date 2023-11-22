@@ -56,24 +56,24 @@ const Partners = () => {
         <div className="mb-5">
           <h3 className="font-semibold text-sm">People</h3>
         </div>
-        <div className="grid sm:grid-cols-3 gap-y-14 gap-x-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
           {peopleData.map((p) => (
-            <div role="button" key={p.name} onClick={() => setDetails(p)}>
-              <span className="sr-only">click to more details</span>
+            <Button key={p.name} className="!p-0" onClick={() => setDetails(p)}>
               <PeopleCard {...p} />
-            </div>
+            </Button>
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-28">
-        <Button
-          className="bg-white text-dark-gray border border-dark-gray"
-          onClick={handleLoadMore}
-          disabled={maxPartners >= PEOPLE.length}
-        >
-          Load more
-        </Button>
-      </div>
+      {maxPartners < PEOPLE.length && (
+        <div className="flex justify-center mt-28">
+          <Button
+            className="bg-white text-dark-gray border border-dark-gray"
+            onClick={handleLoadMore}
+          >
+            Load more
+          </Button>
+        </div>
+      )}
       <PartnersDetails details={details} close={() => setDetails(null)} />
     </div>
   );

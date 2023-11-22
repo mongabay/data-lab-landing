@@ -28,18 +28,16 @@ const Modal = ({
           "fixed top-0 left-0 w-screen h-screen flex flex-col": size === "full",
         })}
       >
-        <div className="w-full flex justify-between p-9">
-          <Dialog.Title className="DialogTitle">{title}</Dialog.Title>
+        <Dialog.Title className="DialogTitle sr-only">{title}</Dialog.Title>
+        <Dialog.Content className="relative h-full container py-14 !pointer-events-auto focus-visible:outline-none overflow-y-auto">
           <Dialog.Close asChild>
             <button
-              className="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:opacity-70"
+              className="absolute top-9 right-9 rounded-full w-8 h-8 bg-white flex justify-center items-center hover:opacity-70"
               aria-label="Close"
             >
               <Icon className="w-5 h-5 fill-dark-gray" icon={XIcon} />
             </button>
           </Dialog.Close>
-        </div>
-        <Dialog.Content className="relative h-[calc(100%-32px)] !pointer-events-auto">
           {children}
         </Dialog.Content>
       </Dialog.Content>
