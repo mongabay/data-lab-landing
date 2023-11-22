@@ -39,7 +39,7 @@ const Blog = ({ posts }: BlogProps) => {
   };
 
   return (
-    <div className="pb-32border-b border-b-light-gray">
+    <div className="pb-32 border-b border-b-light-gray">
       <div className="bg-primary-green pt-9 sm:pt-0  sm:gap-0 gap-6 sm:justify-center flex sm:flex-row flex-col sm:items-center text-white sm:min-h-screen pb-28 sm:pb-0">
         <div className="container w-full sm:h-1/2 space-y-8">
           <h2 className="text-5xl sm:text-6xl font-cardo">
