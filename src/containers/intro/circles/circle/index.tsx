@@ -11,10 +11,12 @@ import Circle from "./item";
 export interface CirclesProps {
   count: number;
   radius: number;
-  color: number;
+  color: string;
   size: number;
   startAngle?: number;
   opacity: number;
+  step: number;
+  isStatic: boolean;
 }
 
 const Y_OFFSET = 1.5;
@@ -26,22 +28,11 @@ const Circles = ({
   size,
   startAngle,
   opacity,
+  step,
+  isStatic,
 }: CirclesProps) => {
-  const [step, setStep] = useState(0);
   const { width, height } = useThree((state) => state.viewport);
   const { gl } = useThree();
-  const [isStatic, setIsStatic] = useState(false);
-
-  const getScroll = useCallback(
-    (ev: any) => {
-      const scrollY = ev?.currentTarget?.scrollY;
-      const step = scrollY > 10 ? 1 : 0;
-
-      setStep(step);
-      setIsStatic(scrollY > gl.domElement.clientHeight);
-    },
-    [gl.domElement.clientHeight]
-  );
 
   const STEP = useMemo(() => {
     const { getPositions, getNoise, getAnimations } = STEPS.find(
@@ -61,14 +52,13 @@ const Circles = ({
     };
   }, [count, height, radius, startAngle, step, width]);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", getScroll);
-    }
-    return () => {
-      window.removeEventListener("scroll", getScroll);
-    };
-  }, [getScroll]);
+  const SIZE = useMemo(() => {
+    const w = gl.domElement.clientWidth;
+    console.log(w);
+    if (w < 768) return 0.03 * w * size;
+    if (w < 1024) return 0.02 * w * size;
+    return w * 0.01 * size;
+  }, [gl.domElement.clientWidth, size]);
 
   if (isStatic) return null;
 
@@ -79,7 +69,7 @@ const Circles = ({
           key={`${p.id}`}
           p={p}
           color={color}
-          size={size}
+          size={SIZE}
           noise={STEP.noise}
           step={step}
           opacity={opacity}

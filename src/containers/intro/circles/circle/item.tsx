@@ -26,7 +26,7 @@ export interface CirclesProps {
     y: number;
     z: number;
   };
-  color: number;
+  color: string;
   size: number;
   noise: number;
   step: number;
