@@ -13,7 +13,7 @@ const HeaderMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="text-dark-gray">
       <button onClick={() => setIsOpen(true)}>
         <span className="sr-only">open navigation menu</span>
         <Icon icon={MenuIcon} className="fill-dark-gray w-[30px] h-[30px]" />
@@ -35,13 +35,13 @@ const HeaderMenu = () => {
         )}
         {...(!isOpen && { inert: "" })}
       >
-        <div className="lg:min-w-[510px] w-screen sm:w-auto pt-8 sm:pt-12 pb-20 sm:px-24 items-center sm:items-start h-full flex flex-col gap-[60px]">
+        <div className="lg:min-w-[510px] w-screen sm:w-auto pt-8 pb-14 px-5 sm:px-[88px] items-start h-full flex flex-col gap-[60px] overflow-y-auto">
           <button
             className="self-end pr-4 sm:pr-0 focus-visible:outline-primary-green focus-visible:outline-offset-4 rounded-full"
             onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">close navigation menu</span>
-            <Icon icon={XIcon} className="fill-dark-gray w-[35px] h-[35px]" />
+            <Icon icon={XIcon} className="fill-dark-gray w-[52px] h-[52px]" />
           </button>
           <p className="font-cardo text-3xl font-bold">Mongabay Chart Tools</p>
           <ul className="space-y-6">
