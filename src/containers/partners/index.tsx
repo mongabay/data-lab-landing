@@ -20,11 +20,7 @@ const Partners = () => {
   const peopleData = useMemo(() => PEOPLE.slice(0, maxPartners), [maxPartners]);
 
   const handleLoadMore = () => {
-    let nextMaxPartners = maxPartners + 3;
-    if (nextMaxPartners > PEOPLE.length) {
-      nextMaxPartners = PEOPLE.length;
-    }
-    setMaxPartners(nextMaxPartners);
+    setMaxPartners(PEOPLE.length);
   };
 
   return (
