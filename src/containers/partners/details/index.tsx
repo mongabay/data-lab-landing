@@ -1,6 +1,5 @@
 import Icon from "@/components/icon";
 import Modal from "@/components/modal";
-import Image from "next/image";
 import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
 import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg";
 import { Partner } from "@/types/partner";
@@ -23,7 +22,7 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
       <div className="min-h-full flex flex-col sm:flex-row sm:justify-center items-center gap-x-20 gap-y-6">
         <div className="shrink-0 flex justify-center items-center">
           {details?.image ? (
-            <Image
+            <img
               src={details.image || "/images/partners-placeholder.svg"}
               width={220}
               height={220}

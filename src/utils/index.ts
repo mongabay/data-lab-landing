@@ -1,4 +1,5 @@
 import xmlToJs from 'xml-js';
+import useSWR from 'swr'
 
 const convertData = (data: string) => {
     const result = xmlToJs.xml2json(data, { compact: true, spaces: 4 });
@@ -7,9 +8,11 @@ const convertData = (data: string) => {
 }
 
 /** Fetch and format posts  */
-export const getData = async () => {
-    try {
-        const res = await fetch('https://news.mongabay.com/feed/?post_type=post&feedtype=bulletpoints&list=data-lab');
+export const useData = () => {
+  return useSWR(
+    `https://news.mongabay.com/feed/?post_type=post&feedtype=bulletpoints&list=data-lab`,
+    async (url: string) => {
+        const res = await fetch(url);
 
         const rawData = convertData(await res.text());
         const parsedData = JSON.parse(rawData).rss.channel.item.map((item: any) => ({
@@ -22,12 +25,11 @@ export const getData = async () => {
 
         if (Array.isArray(parsedData)) {
             if (parsedData.every(d => d.date && d.title && d.description && d.image && d.url)) {
-                return { isError: false, data: parsedData };
+                return parsedData;
             }
         }
 
-        return { isError: true, data: [] };
-    } catch (e) {
-        return { isError: true, data: [] };
+        return [];
     }
+  );
 }

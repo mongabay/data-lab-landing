@@ -1,5 +1,4 @@
 import Icon from "@/components/icon";
-import Image from "next/image";
 import cx from "classnames";
 import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
 import { Company } from "@/types/partner";
@@ -16,7 +15,7 @@ const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) =>
         )}
       >
         {image ? (
-          <Image
+          <img
             src={image}
             width={imageWidth}
             height={imageHeight}

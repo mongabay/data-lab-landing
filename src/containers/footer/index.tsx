@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { TOOLS } from "@/constants";
 
 const Footer = () => {
@@ -7,7 +5,7 @@ const Footer = () => {
     <footer className="bg-primary-green text-white font-open">
       <div className="mx-auto w-full container flex sm:flex-row flex-col gap-y-6 gap-x-8 sm:gap-y-0 lg:gap-x-0 justify-between py-11">
         <div className="flex-1">
-          <Image
+          <img
             src="/images/mongabay-logo.png"
             width={182}
             height={27}
@@ -39,7 +37,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="mt-2 inline-block"
           >
-            <Image
+            <img
               className="w-6 h-6 fill-white stroke-white"
               src="/images/linkedin.svg"
               width={24}

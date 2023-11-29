@@ -1,6 +1,5 @@
 import Button from "@/components/button";
 import Icon from "@/components/icon";
-import Image from "next/image";
 import { useMemo } from "react";
 
 import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg?sprite";
@@ -22,7 +21,7 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
   return (
     <div className="group space-y-3 text-dark-gray font-open">
       <div className="pb-5 flex justify-center items-center">
-        <Image
+        <img
           className="w-full h-full object-cover group-hover:brightness-75 transition-all duration-300 ease-in-out"
           src={image}
           alt={title}

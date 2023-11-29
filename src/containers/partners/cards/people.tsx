@@ -1,5 +1,4 @@
 import Icon from "@/components/icon";
-import Image from "next/image";
 import cx from "classnames";
 import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
 import { Partner } from "@/types/partner";
@@ -14,7 +13,7 @@ const PartnerCard = ({ name, image, role, company }: Partner) => {
         )}
       >
         {image ? (
-          <Image
+          <img
             className="object-cover object-center w-[164px] h-[164px] rounded-full"
             src={image}
             width={164}

@@ -1,27 +1,24 @@
+"use client";
+
 import cx from "classnames";
 
 import { useMemo } from "react";
 import Card from "./card";
 
-import type { CardProps } from "./card";
 import Button from "@/components/button";
 
+import { useData } from "@/utils";
 import Icon from "@/components/icon";
 import ArrowIcon from "@/styles/icons/blog-arrow.svg?sprite";
 
 // Number of posts to show initially
 const INITIAL_MAX_POSTS = 5;
 
-type BlogProps = {
-  posts: {
-    data: CardProps[];
-    isError: boolean;
-  };
-};
+const Blog = () => {
+  const { data: posts, error } = useData();
 
-const Blog = ({ posts }: BlogProps) => {
   const POSTS = useMemo(() => {
-    return posts.data.slice(0, INITIAL_MAX_POSTS);
+    return posts?.slice(0, INITIAL_MAX_POSTS) ?? [];
   }, [posts]);
 
   return (
@@ -64,8 +61,7 @@ const Blog = ({ posts }: BlogProps) => {
           className={cx(
             "bg-primary-green text-white font-semibold",
             {
-              "-translate-y-20 sm:-translate-y-40  border border-white":
-                posts.isError,
+              "-translate-y-20 sm:-translate-y-40  border border-white": !!error,
             }
           )}
           href="https://www.mongabay.com/list/data-lab/"

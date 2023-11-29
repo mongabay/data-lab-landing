@@ -1,4 +1,3 @@
-import Image from "next/image";
 import cx from "classnames";
 
 import Button from "@/components/button";
@@ -59,7 +58,7 @@ const Tools = () => {
                 "order-2": index % 2 === 0,
               })}
             >
-              <Image width={556} height={483} src={image} alt={title} />
+              <img width={556} height={483} src={image} alt={title} />
             </div>
           </div>
         );

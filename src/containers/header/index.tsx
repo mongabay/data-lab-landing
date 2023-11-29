@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeaderMenu from "./menu";
 
 const Header = () => {
@@ -6,7 +5,7 @@ const Header = () => {
     <header className="absolute w-full z-50 ">
       <div className="container pt-8 sm:pt-12">
         <div className="flex justify-between">
-          <Image
+          <img
             src="/images/mongabay-logo.png"
             width={182}
             height={27}
