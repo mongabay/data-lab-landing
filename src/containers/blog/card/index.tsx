@@ -20,8 +20,8 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
   );
 
   return (
-    <div className="space-y-3 text-dark-gray font-open">
-      <div className="pb-5 group flex justify-center items-center">
+    <div className="group space-y-3 text-dark-gray font-open">
+      <div className="pb-5 flex justify-center items-center">
         <Image
           className="w-full h-full object-cover group-hover:brightness-75 transition-all duration-300 ease-in-out"
           src={image}
@@ -43,9 +43,9 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
         </Button>
       </div>
       <p className="text-medium-gray font-open text-base">{dateText}</p>
-      <div className="text-2xl sm:text-[28px] font-cardo leading-tight">
+      <a className="block text-2xl sm:text-[28px] font-cardo leading-tight" href={url} rel="noopener noreferrer" target="_blank">
         {title}
-      </div>
+      </a>
       <div
         className="leading-relaxed text-xs sm:text-base  line-clamp-3"
         dangerouslySetInnerHTML={{ __html: description }}

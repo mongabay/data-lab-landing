@@ -1,8 +1,6 @@
-"use client";
-
 import cx from "classnames";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Card from "./card";
 
 import type { CardProps } from "./card";
@@ -13,8 +11,6 @@ import ArrowIcon from "@/styles/icons/blog-arrow.svg?sprite";
 
 // Number of posts to show initially
 const INITIAL_MAX_POSTS = 5;
-// Max number of posts to load (initial max posts + 3 posts by row * 3 rows)
-const MAX_POSTS = INITIAL_MAX_POSTS + 3 * 2;
 
 type BlogProps = {
   posts: {
@@ -24,22 +20,12 @@ type BlogProps = {
 };
 
 const Blog = ({ posts }: BlogProps) => {
-  const [maxPosts, setMaxPosts] = useState(INITIAL_MAX_POSTS);
-
-  const loadMore = maxPosts < MAX_POSTS && !posts.isError;
-
   const POSTS = useMemo(() => {
-    return posts.data.slice(0, maxPosts);
-  }, [posts, maxPosts]);
-
-  const handleClickMore = () => {
-    if (loadMore) {
-      setMaxPosts(maxPosts + 3);
-    }
-  };
+    return posts.data.slice(0, INITIAL_MAX_POSTS);
+  }, [posts]);
 
   return (
-    <div className="pb-32 border-b border-b-light-gray">
+    <div className="pb-24 sm:pb-32 border-b border-b-light-gray">
       <div className="bg-primary-green pt-9 sm:pt-0  sm:gap-0 gap-6 sm:justify-center flex sm:flex-row flex-col sm:items-center text-white sm:min-h-screen pb-28 sm:pb-0">
         <div className="container w-full sm:h-1/2 space-y-8">
           <h2 className="text-5xl sm:text-6xl font-cardo">
@@ -73,25 +59,18 @@ const Blog = ({ posts }: BlogProps) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="-translate-y-5 sm:-translate-y-16 flex justify-center">
         <Button
           className={cx(
-            maxPosts < MAX_POSTS
-              ? "bg-white text-dark-gray border border-dark-gray"
-              : "bg-primary-green text-white",
+            "bg-primary-green text-white font-semibold",
             {
               "-translate-y-20 sm:-translate-y-40  border border-white":
                 posts.isError,
             }
           )}
-          href={
-            !loadMore ? "https://www.mongabay.com/list/data-lab/" : undefined
-          }
-          onClick={handleClickMore}
+          href="https://www.mongabay.com/list/data-lab/"
         >
-          {maxPosts < MAX_POSTS && !posts.isError
-            ? "Load more"
-            : "Go to Mongabay Data Lab News"}
+          Go to Mongabay Data Lab News
         </Button>
       </div>
     </div>
