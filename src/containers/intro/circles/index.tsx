@@ -9,16 +9,16 @@ import { useEffect, useRef, useState } from "react";
 
 const generic = {
   count: 16,
-  radius: 90,
-  size: 2,
+  radius: 40,
+  size: 1.5,
   startAngle: 30,
-  opacity: 0.5,
+  opacity: 0.08,
 };
 
 const tools = {
   count: 4,
-  radius: 90,
-  size: 3,
+  radius: 56,
+  size: 2,
   startAngle: 30,
   opacity: 1,
 };

@@ -54,10 +54,7 @@ const Circles = ({
 
   const SIZE = useMemo(() => {
     const w = gl.domElement.clientWidth;
-    console.log(w);
-    if (w < 768) return 0.03 * w * size;
-    if (w < 1024) return 0.02 * w * size;
-    return w * 0.01 * size;
+    return Math.max(Math.min(w, 1280), 768) * 0.01 * size;
   }, [gl.domElement.clientWidth, size]);
 
   if (isStatic) return null;
