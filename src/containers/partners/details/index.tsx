@@ -19,7 +19,7 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
       className="bg-dark-gray text-white"
       size="full"
     >
-      <div className="min-h-full flex flex-col sm:flex-row sm:justify-center items-center gap-x-20 gap-y-6">
+      <div className="min-h-full flex flex-col sm:flex-row sm:justify-center items-center sm:items-start gap-x-20 gap-y-6">
         <div className="shrink-0 flex justify-center items-center">
           {details?.image ? (
             <img
@@ -27,7 +27,7 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
               width={220}
               height={220}
               alt={details.name}
-              className="w-1/2 max-w-[220px] sm:max-w-auto sm:w-[220px] sm:h-[220px] rounded-full"
+              className="w-1/2 max-w-[220px] aspect-square sm:w-full rounded-full object-cover"
             />
           ) : (
             <Icon icon={PartnersPlaceholderIcon} className="w-14 h-14" />
