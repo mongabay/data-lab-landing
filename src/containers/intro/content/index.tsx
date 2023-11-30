@@ -1,12 +1,11 @@
 const IntroContent = () => {
   return (
-    <div className="max-w-xl text-center font-serif text-dark-gray">
-      <h1 className="text-6xl sm:text-[110px] mb-5 font-cardo leading-tight">
-        Charts Tool
+    <div className="max-w-5xl text-center font-serif text-dark-gray">
+      <h1 className="text-6xl lg:text-[90px] mb-5 font-cardo leading-tight">
+        Data Journalism Tools
       </h1>
-      <p className="max-w-md mx-auto text-sm sm:text-2xl sm:leading-[38px] font-open">
-        A suite of tools for journalists to deliver data-backed environmental
-        stories.
+      <p className="max-w-2xl mx-auto text-sm sm:text-2xl sm:leading-[38px] font-open">
+        A suite of no-code vizualization tools designed for journalists to create stories backed by reliable data sources.
       </p>
     </div>
   );

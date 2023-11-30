@@ -6,9 +6,9 @@ import Partners from "@/containers/partners";
 import Tools from "@/containers/tools";
 
 export const metadata = {
-  title: "Charts Tool",
+  title: "Data Journalism Tools",
   description:
-    "A suite of tools for journalists to deliver data-backed environmental stories.",
+    "A suite of no-code vizualization tools designed for journalists to create stories backed by reliable data sources.",
 };
 
 export default async function Home() {

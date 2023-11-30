@@ -9,7 +9,7 @@ const ParticlesLogo = () => {
       <div className="absolute h-screen w-full">
         <Circles />
       </div>
-      <div className="relative z-10 container h-screen flex flex-col pt-40 sm:pt-0 pb-20 sm:pb-0 justify-center items-center">
+      <div className="relative z-10 container h-screen flex flex-col pt-40 sm:pt-20 pb-20 sm:pb-0 justify-center items-center">
         <IntroContent />
       </div>
     </div>

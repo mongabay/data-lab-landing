@@ -7,39 +7,36 @@ import Icon from "@/components/icon";
 const Tools = () => {
   return (
     <div className="container text-dark-gray">
-      {TOOLS.map(({ color, image, description, title, icon, url }, index) => {
+      {TOOLS.map(({ color, image, imageWidth, imageHeight, description, title, icon, url }, index) => {
         return (
           <div
-            className="min-h-screen mb-10 sm:mb-0 flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12"
+            className={cx("mb-28 lg:mb-44 flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-12", { 'lg:mt-28': index === 0 })}
             key={title}
           >
             <div
-              className={cx("max-w-sm space-y-6 font-open", {
-                "sm:order-2": index % 2 !== 0,
-                "sm:order-1": index % 2 === 0,
+              className={cx("relative max-w-sm space-y-6 font-open", {
+                "lg:order-2": index % 2 !== 0,
+                "lg:order-1": index % 2 === 0,
               })}
             >
-              <h2 className="text-[32px] sm:text-6xl font-cardo leading-tight max-w-xs">
+              <h2 className="text-[32px] lg:text-6xl font-cardo leading-tight max-w-xs">
                 {title}
               </h2>
-              <p className="text-xs sm:text-lg">{description}</p>
+              <p className="lg:text-lg">{description}</p>
               <Button
                 style={{
                   backgroundColor: color,
                 }}
                 href={url}
-                className="text-xs sm:text-sm text-white relative z-10"
+                className="lg:text-sm font-semibold text-white relative z-10"
               >
                 Explore charts
               </Button>
               <div
                 className={cx(
-                  "absolute z-0 -translate-y-[125%] sm:right-auto -right-0",
+                  "absolute z-0 right-0 -bottom-6 lg:-bottom-24 w-2/5 lg:w-64",
                   {
-                    "sm:-translate-y-2/3 sm:translate-x-[85%] ": index === 0,
-                    "sm:-translate-y-full sm:translate-x-1/3 ": index === 1,
-                    "sm:-translate-y-[85%] sm:translate-x-[90%] ": index === 2,
-                    "sm:-translate-y-[150%] sm:translate-x-1/2 ": index === 3,
+                    "lg:-right-24": index % 2 === 0
                   }
                 )}
               >
@@ -47,18 +44,18 @@ const Tools = () => {
                   style={{
                     fill: color,
                   }}
-                  className="w-[253px] h-[253px] opacity-10"
+                  className="opacity-10"
                   icon={icon}
                 />
               </div>
             </div>
             <div
-              className={cx("relative z-10", {
+              className={cx("relative z-10 mt-4 lg:mt-0", {
                 "order-1": index % 2 !== 0,
                 "order-2": index % 2 === 0,
               })}
             >
-              <img width={556} height={483} src={image} alt={title} />
+              <img width={imageWidth} height={imageHeight} src={image} alt={title} />
             </div>
           </div>
         );
