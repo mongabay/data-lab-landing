@@ -35,6 +35,9 @@ const config: Config = {
         open: ["var(--font-open)"],
         cardo: ["var(--font-cardo)"],
       },
+      fontSize: {
+        '3.5xl': ['32px', '48px'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

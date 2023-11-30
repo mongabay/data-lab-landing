@@ -26,7 +26,7 @@ const Partners = () => {
   return (
     <div className="py-20 container mx-auto text-dark-gray">
       <div className="space-y-8">
-        <h2 className="max-w-xl font-cardo text-6xl">
+        <h2 className="max-w-xl font-cardo text-3.5xl sm:text-6xl">
           People and partner companies
         </h2>
         <p className="max-w-md">
@@ -35,7 +35,7 @@ const Partners = () => {
         </p>
       </div>
 
-      <div className="mt-32">
+      <div className="mt-12 sm:mt-32">
         <div className="mb-5">
           <h3 className="font-semibold text-sm">Companies</h3>
         </div>
@@ -48,7 +48,7 @@ const Partners = () => {
         </div>
       </div>
 
-      <div className="mt-32">
+      <div className="mt-20 sm:mt-32">
         <div className="mb-5">
           <h3 className="font-semibold text-sm">People</h3>
         </div>
@@ -61,7 +61,7 @@ const Partners = () => {
         </div>
       </div>
       {maxPartners < PEOPLE.length && (
-        <div className="flex justify-center mt-28">
+        <div className="flex justify-center mt-16 sm:mt-28">
           <Button
             className="bg-white text-dark-gray border border-dark-gray"
             onClick={handleLoadMore}

@@ -24,8 +24,8 @@ const Blog = () => {
   return (
     <div className="pb-24 sm:pb-32 border-b border-b-light-gray">
       <div className="bg-primary-green pt-9 sm:pt-0  sm:gap-0 gap-6 sm:justify-center flex sm:flex-row flex-col sm:items-center text-white sm:min-h-screen pb-28 sm:pb-0">
-        <div className="container w-full sm:h-1/2 space-y-8">
-          <h2 className="text-5xl sm:text-6xl font-cardo">
+        <div className="container w-full sm:h-1/2 space-y-3 sm:space-y-8">
+          <h2 className="text-3.5xl sm:text-6xl font-cardo">
             How can you use them?
           </h2>
           <p className="max-w-md">
@@ -33,7 +33,7 @@ const Blog = () => {
             Charts Tool, directly in our stories.
           </p>
         </div>
-        <div className="sm:absolute sm:translate-x-[130%]">
+        <div className="sm:absolute sm:right-0 lg:right-auto lg:translate-x-[130%]">
           <Icon
             icon={ArrowIcon}
             className="w-[98px] h-[117px] mt-5 ml-5 sm:ml-0 sm:mt-0 sm:w-[237px] sm:h-[286px]"

@@ -14,7 +14,7 @@ const PartnerCard = ({ name, image, role, company }: Partner) => {
       >
         {image ? (
           <img
-            className="object-cover object-center w-[164px] h-[164px] rounded-full"
+            className="object-cover object-center w-[120px] h-[120px] sm:w-[164px] sm:h-[164px] rounded-full"
             src={image}
             width={164}
             height={164}

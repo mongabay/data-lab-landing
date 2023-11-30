@@ -7,7 +7,7 @@ import Button from "@/components/button";
 
 const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) => {
   return (
-    <div className="animate-in duration-700 fade-in text-dark-gray text-base font-open flex flex-col items-center justify-between w-full p-5 pt-10 min-h-[280px] border border-light-gray">
+    <div className="animate-in duration-700 fade-in text-dark-gray text-base font-open flex flex-col items-center justify-between w-full p-5 pt-10 min-h-[210px] sm:min-h-[280px] border border-light-gray">
       <div
         className={cx(
           "transition-color duration-300 w-full",
