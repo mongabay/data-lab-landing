@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Trase",
+    "link": "https://www.trase.earth/",
+    "image": "/images/trase-logo.png",
+    "imageWidth": 274,
+    "imageHeight": 63
+  },
+  {
+    "name": "Vizzuality",
+    "link": "https://www.vizzuality.com/",
+    "image": "/images/vizzuality-logo.png",
+    "imageWidth": 199,
+    "imageHeight": 50
+  },
+  {
+    "name": "WRI",
+    "link": "https://www.wri.org/",
+    "image": "/images/wri-logo.png",
+    "imageWidth": 241,
+    "imageHeight": 88
+  },
+  {
+    "name": "Mongabay",
+    "link": "https://mongabay.org/",
+    "image": "/images/mongabay-logo.png",
+    "imageWidth": 283,
+    "imageHeight": 42,
+    "style": { "filter": "invert(1)" }
+  }
+]

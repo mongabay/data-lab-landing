@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { shaderMaterial } from '@react-three/drei';
 import { Color } from '@react-three/fiber';
@@ -19,7 +19,7 @@ export type CircleMaterialProps = {
   uProgress: number;
 
   uRadius: number;
-  uColor: Color,
+  uColor: Color;
   uOpacity: number;
 
   uStep: number;
@@ -31,7 +31,7 @@ export type CircleMaterialProps = {
   uVelocity: number[];
   uPrevVelocity: number[];
   transparent: boolean;
-}
+};
 
 export const CircleMaterial = shaderMaterial(
   {
@@ -59,7 +59,7 @@ export const CircleMaterial = shaderMaterial(
     uPrevVelocity: [0, 0],
   },
   glslify(VERTEX),
-  glslify(FRAGMENT)
+  glslify(FRAGMENT),
 );
 
 export default CircleMaterial;
