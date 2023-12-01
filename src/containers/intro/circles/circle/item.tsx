@@ -1,19 +1,16 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from 'react';
 
-import { extend, ReactThreeFiber, useFrame } from "@react-three/fiber";
-import { Color } from "three";
+import { extend, ReactThreeFiber, useFrame } from '@react-three/fiber';
+import { Color } from 'three';
 
-import CircleMaterial, { CircleMaterialProps } from "./material";
+import CircleMaterial, { CircleMaterialProps } from './material';
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      circleMaterial: ReactThreeFiber.Object3DNode<
-        CircleMaterialProps,
-        typeof CircleMaterial
-      >;
+      circleMaterial: ReactThreeFiber.Object3DNode<CircleMaterialProps, typeof CircleMaterial>;
     }
   }
 }
@@ -70,8 +67,7 @@ const Circle = ({ p, size, color, noise, step, opacity }: CirclesProps) => {
     materialRef.current.uTime = performance.now() / 1000;
 
     if (step !== materialRef.current.uPrevStep) {
-      materialRef.current.uProgress =
-        materialRef.current.uProgress + 0.01 / (DURATION / 1000);
+      materialRef.current.uProgress = materialRef.current.uProgress + 0.01 / (DURATION / 1000);
     }
 
     if (materialRef.current.uProgress > 1) {

@@ -1,9 +1,9 @@
-import Icon from "@/components/icon";
-import Modal from "@/components/modal";
-import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
-import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg";
-import { Partner } from "@/types/partner";
-import Button from "@/components/button";
+import Icon from '@/components/icon';
+import Modal from '@/components/modal';
+import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
+import { Partner } from '@/types/partner';
+import Button from '@/components/button';
 
 type PartnersDetailsProps = {
   details: Partner | null;
@@ -19,27 +19,25 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
       className="bg-dark-gray text-white"
       size="full"
     >
-      <div className="min-h-full flex flex-col sm:flex-row sm:justify-center items-center sm:items-start gap-x-20 gap-y-6">
-        <div className="shrink-0 flex justify-center items-center">
+      <div className="flex min-h-full flex-col items-center gap-x-20 gap-y-6 sm:flex-row sm:items-start sm:justify-center">
+        <div className="flex shrink-0 items-center justify-center">
           {details?.image ? (
             <img
-              src={details.image || "/images/partners-placeholder.svg"}
+              src={details.image || '/images/partners-placeholder.svg'}
               width={220}
               height={220}
               alt={details.name}
-              className="w-1/2 max-w-[220px] aspect-square sm:w-full rounded-full object-cover"
+              className="aspect-square w-1/2 max-w-[220px] rounded-full object-cover sm:w-full"
             />
           ) : (
-            <Icon icon={PartnersPlaceholderIcon} className="w-14 h-14" />
+            <Icon icon={PartnersPlaceholderIcon} className="h-14 w-14" />
           )}
         </div>
-        <div className="text-white max-w-[400px] font-open space-y-8">
+        <div className="max-w-[400px] space-y-8 font-open text-white">
           <div className="space-y-2 text-center sm:text-left">
-            <h3 className="font-cardo text-[28px] leading-tight mb-4">
-              {details?.name}
-            </h3>
+            <h3 className="mb-4 font-cardo text-[28px] leading-tight">{details?.name}</h3>
             <p>
-              {details?.role} <span className="text-white/20">|</span>{" "}
+              {details?.role} <span className="text-white/20">|</span>{' '}
               <a
                 href={details?.companyLink}
                 target="_blank"
@@ -50,20 +48,15 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
               </a>
             </p>
           </div>
-          {details?.description && (
-            <p dangerouslySetInnerHTML={{ __html: details.description }} />
-          )}
+          {details?.description && <p dangerouslySetInnerHTML={{ __html: details.description }} />}
           <Button
             href={details?.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer inline-flex items-center gap-x-4 !p-0"
+            className="inline-flex cursor-pointer items-center gap-x-4 !p-0"
           >
             See profile
-            <Icon
-              icon={ArrowUpRightIcon}
-              className="w-5 h-5 fill-white stroke-white"
-            />
+            <Icon icon={ArrowUpRightIcon} className="h-5 w-5 fill-white stroke-white" />
           </Button>
         </div>
       </div>

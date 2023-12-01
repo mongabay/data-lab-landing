@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { Group, NoToneMapping, Object3DEventMap } from "three";
-import { Canvas } from "@react-three/fiber";
+import { Group, NoToneMapping, Object3DEventMap } from 'three';
+import { Canvas } from '@react-three/fiber';
 
-import Circles from "./circle";
-import { COLORS } from "@/constants";
-import { useEffect, useRef, useState } from "react";
+import Circles from './circle';
+import { COLORS } from '@/constants';
+import { useEffect, useRef, useState } from 'react';
 
 const generic = {
   count: 16,
@@ -46,11 +46,11 @@ const ParticlesCanvas = () => {
     // Trigger animation by timeout
     const trigger = setTimeout(() => setStep(1), 1000);
 
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", onScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', onScroll);
     }
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('scroll', onScroll);
       clearTimeout(trigger);
     };
   }, []);

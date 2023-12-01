@@ -1,5 +1,5 @@
-import cx from "classnames";
-import { CSSProperties } from "react";
+import cx from 'classnames';
+import { CSSProperties } from 'react';
 
 interface BrowserSpriteSymbol {
   id: string;
@@ -22,10 +22,10 @@ export interface IconProps {
 const Icon = ({ icon, className, style }: IconProps) => (
   <svg
     className={cx({
-      "fill-current": true,
+      'fill-current': true,
       [className as string]: !!className,
     })}
-    viewBox={icon?.viewBox || "0 0 32 32"}
+    viewBox={icon?.viewBox || '0 0 32 32'}
     style={style}
   >
     <use xlinkHref={`#${icon?.id}`} />

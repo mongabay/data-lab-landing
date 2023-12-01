@@ -1,19 +1,14 @@
-import Icon from "@/components/icon";
-import cx from "classnames";
-import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
-import { Company } from "@/types/partner";
-import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg?sprite";
-import Button from "@/components/button";
+import Icon from '@/components/icon';
+import cx from 'classnames';
+import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg?sprite';
+import { Company } from '@/types/partner';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import Button from '@/components/button';
 
 const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) => {
   return (
-    <div className="animate-in duration-700 fade-in text-dark-gray text-base font-open flex flex-col items-center justify-between w-full p-5 pt-10 min-h-[210px] sm:min-h-[280px] border border-light-gray">
-      <div
-        className={cx(
-          "transition-color duration-300 w-full",
-          !image && "bg-[#F4F4F4]"
-        )}
-      >
+    <div className="flex min-h-[210px] w-full flex-col items-center justify-between border border-light-gray p-5 pt-10 font-open text-base text-dark-gray duration-700 animate-in fade-in sm:min-h-[280px]">
+      <div className={cx('transition-color w-full duration-300', !image && 'bg-[#F4F4F4]')}>
         {image ? (
           <img
             src={image}
@@ -23,13 +18,16 @@ const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) =>
             style={{ ...style }}
           />
         ) : (
-          <Icon icon={PartnersPlaceholderIcon} className="w-9 h-9" />
+          <Icon icon={PartnersPlaceholderIcon} className="h-9 w-9" />
         )}
       </div>
-      <div className="mt-6 flex items-center justify-between w-full">
-        <Button href={link} className="w-full !p-0 flex justify-between items-center font-cardo text-[28px] leading-tight">
+      <div className="mt-6 flex w-full items-center justify-between">
+        <Button
+          href={link}
+          className="flex w-full items-center justify-between !p-0 font-cardo text-[28px] leading-tight"
+        >
           {name}
-          <Icon icon={ArrowUpRightIcon} className="w-5 h-5" />
+          <Icon icon={ArrowUpRightIcon} className="h-5 w-5" />
         </Button>
       </div>
     </div>

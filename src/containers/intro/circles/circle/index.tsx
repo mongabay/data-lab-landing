@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { useThree } from "@react-three/fiber";
+import { useThree } from '@react-three/fiber';
 
-import { STEPS } from "../constants";
+import { STEPS } from '../constants';
 
-import Circle from "./item";
+import Circle from './item';
 
 export interface CirclesProps {
   count: number;
@@ -35,9 +35,7 @@ const Circles = ({
   const { gl } = useThree();
 
   const STEP = useMemo(() => {
-    const { getPositions, getNoise, getAnimations } = STEPS.find(
-      (s) => s.id === step
-    ) as any;
+    const { getPositions, getNoise, getAnimations } = STEPS.find((s) => s.id === step) as any;
     return {
       positions: getPositions({
         count,

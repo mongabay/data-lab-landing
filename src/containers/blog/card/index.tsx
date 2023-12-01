@@ -1,66 +1,65 @@
-import Button from "@/components/button";
-import Icon from "@/components/icon";
-import { useMemo } from "react";
+import Button from '@/components/button';
+import Icon from '@/components/icon';
+import { useMemo } from 'react';
 
-import ArrowUpRightIcon from "@/styles/icons/arrow-up-right.svg?sprite";
-import { Article } from "@/types/article";
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import { Article } from '@/types/article';
 
 export type CardProps = Article;
 
 const Card = ({ date, description, image, title, url }: CardProps) => {
   const dateText = useMemo(
     () =>
-      new Date(date).toLocaleDateString("en-UK", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
+      new Date(date).toLocaleDateString('en-UK', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
       }),
-    [date]
+    [date],
   );
 
   return (
-    <div className="group space-y-3 text-dark-gray font-open">
-      <div className="pb-5 flex justify-center items-center">
+    <div className="group space-y-3 font-open text-dark-gray">
+      <div className="flex items-center justify-center pb-5">
         <img
-          className="w-full h-full object-cover group-hover:brightness-75 transition-all duration-300 ease-in-out"
+          className="h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:brightness-75"
           src={image}
           alt={title}
           width={300}
           height={300}
         />
         <Button
-          className="hidden sm:block transition-all duration-300 absolute group-hover:opacity-100 focus-within:opacity-100 opacity-0 bg-white text-dark-gray"
+          className="absolute hidden bg-white text-dark-gray opacity-0 transition-all duration-300 focus-within:opacity-100 group-hover:opacity-100 sm:block"
           href={url}
         >
           <>
             Go to article
-            <Icon
-              className="inline-block w-2.5 h-2.5 ml-3"
-              icon={ArrowUpRightIcon}
-            />
+            <Icon className="ml-3 inline-block h-2.5 w-2.5" icon={ArrowUpRightIcon} />
           </>
         </Button>
       </div>
-      <p className="text-medium-gray font-open text-base">{dateText}</p>
-      <a className="block text-2xl sm:text-[28px] font-cardo leading-tight" href={url} rel="noopener noreferrer" target="_blank">
+      <p className="font-open text-base text-medium-gray">{dateText}</p>
+      <a
+        className="block font-cardo text-2xl leading-tight sm:text-[28px]"
+        href={url}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         {title}
       </a>
       <div
-        className="leading-relaxed line-clamp-3"
+        className="line-clamp-3 leading-relaxed"
         dangerouslySetInnerHTML={{ __html: description }}
-        {...({ inert: '' })}
+        {...{ inert: '' }}
       />
       <Button
         target="_blank"
-        className="sm:hidden block pl-0 transition-all duration-300 bg-white text-dark-gray underline font-semibold"
+        className="block bg-white pl-0 font-semibold text-dark-gray underline transition-all duration-300 sm:hidden"
         href={url}
       >
         <>
           Go to article
-          <Icon
-            className="inline-block w-2.5 h-2.5 ml-3"
-            icon={ArrowUpRightIcon}
-          />
+          <Icon className="ml-3 inline-block h-2.5 w-2.5" icon={ArrowUpRightIcon} />
         </>
       </Button>
     </div>

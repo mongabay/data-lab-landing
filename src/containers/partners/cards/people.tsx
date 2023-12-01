@@ -1,31 +1,31 @@
-import Icon from "@/components/icon";
-import cx from "classnames";
-import PartnersPlaceholderIcon from "@/styles/icons/partners-placeholder.svg?sprite";
-import { Partner } from "@/types/partner";
+import Icon from '@/components/icon';
+import cx from 'classnames';
+import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg?sprite';
+import { Partner } from '@/types/partner';
 
 const PartnerCard = ({ name, image, role, company }: Partner) => {
   return (
-    <div className="animate-in duration-700 fade-in text-dark-gray text-base font-open flex flex-col justify-between w-full h-full border border-light-gray p-6">
+    <div className="flex h-full w-full flex-col justify-between border border-light-gray p-6 font-open text-base text-dark-gray duration-700 animate-in fade-in">
       <div
         className={cx(
-          "transition-color duration-300 w-full flex items-center justify-center",
-          !image && "bg-[#F4F4F4]"
+          'transition-color flex w-full items-center justify-center duration-300',
+          !image && 'bg-[#F4F4F4]',
         )}
       >
         {image ? (
           <img
-            className="object-cover object-center w-[120px] h-[120px] sm:w-[164px] sm:h-[164px] rounded-full"
+            className="h-[120px] w-[120px] rounded-full object-cover object-center sm:h-[164px] sm:w-[164px]"
             src={image}
             width={164}
             height={164}
             alt={name}
           />
         ) : (
-          <Icon icon={PartnersPlaceholderIcon} className="w-9 h-9" />
+          <Icon icon={PartnersPlaceholderIcon} className="h-9 w-9" />
         )}
       </div>
       <div className="pt-6">
-        <div className="font-cardo text-[28px] leading-tight mb-4 capitalize cursor-pointer">
+        <div className="mb-4 cursor-pointer font-cardo text-[28px] capitalize leading-tight">
           {name.toLowerCase()}
         </div>
         <p className="space-x-3 text-base">
