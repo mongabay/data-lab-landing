@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -25,26 +25,25 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "dark-gray": "#222",
-        "medium-gray": "#7E7E7E",
-        "light-gray": "#D8D8D8",
-        "primary-green": "#03755E",
-        "primary-green-dark": "#015645",
+        'dark-gray': '#222',
+        'medium-gray': '#7E7E7E',
+        'light-gray': '#D8D8D8',
+        'primary-green': '#03755E',
+        'primary-green-dark': '#015645',
       },
       fontFamily: {
-        open: ["var(--font-open)"],
-        cardo: ["var(--font-cardo)"],
+        open: ['var(--font-open)'],
+        cardo: ['var(--font-cardo)'],
       },
       fontSize: {
         '3.5xl': ['32px', '48px'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [require('tailwindcss-animate')],
-}
-export default config
+};
+export default config;
