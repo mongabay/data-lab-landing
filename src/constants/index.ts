@@ -76,7 +76,7 @@ export const TOOLS = [
   },
   {
     id: 'trade-flow-map',
-    name: 'Trade flow map',
+    name: 'Trade Flow Map',
     description:
       'Agricultural commodities move globally and cause deforestation. Find, follow, and create maps of their trail with data from Trase.earth.',
     color: COLORS[3],
