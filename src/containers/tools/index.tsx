@@ -8,14 +8,28 @@ const Tools = () => {
   return (
     <div className="container text-dark-gray">
       {TOOLS.map(
-        ({ color, image, imageWidth, imageHeight, description, title, icon, url }, index) => {
+        (
+          {
+            color,
+            image,
+            imageWidth,
+            imageHeight,
+            description,
+            name,
+            subtitle,
+            icon,
+            url,
+            partners,
+          },
+          index,
+        ) => {
           return (
             <div
               className={cx(
                 'mb-28 flex flex-col items-center justify-center gap-6 lg:mb-44 lg:flex-row lg:gap-12',
                 { 'lg:mt-28': index === 0 },
               )}
-              key={title}
+              key={name}
             >
               <div
                 className={cx('relative max-w-sm space-y-6 font-open', {
@@ -24,21 +38,35 @@ const Tools = () => {
                 })}
               >
                 <h2 className="max-w-xs font-cardo text-[32px] leading-tight lg:text-6xl">
-                  {title}
+                  {name}
                 </h2>
-                <p className="lg:text-lg">{description}</p>
+                <p className="font-cardo text-[28px] leading-9">{subtitle}</p>
+                <p>{description}</p>
                 <Button
                   style={{
                     backgroundColor: color,
                   }}
                   href={url}
-                  className="relative z-10 font-semibold text-white lg:text-sm"
+                  className="relative z-10 text-white"
                 >
                   Explore charts
                 </Button>
+                <p className="!mt-8 sm:!mt-14">
+                  Built with{' '}
+                  {partners.map(({ name, image, width, height, invert }) => (
+                    <img
+                      key={name}
+                      className={cx({ 'ml-3 inline-block': true, invert: invert })}
+                      src={image}
+                      width={width}
+                      height={height}
+                      alt={name}
+                    />
+                  ))}
+                </p>
                 <div
-                  className={cx('absolute -bottom-6 right-0 z-0 w-2/5 lg:-bottom-24 lg:w-64', {
-                    'lg:-right-24': index % 2 === 0,
+                  className={cx('absolute -bottom-6 right-0 z-0 w-2/5 lg:bottom-16 lg:w-64', {
+                    'lg:-right-14': index % 2 === 0,
                   })}
                 >
                   <Icon
@@ -56,7 +84,7 @@ const Tools = () => {
                   'order-2': index % 2 === 0,
                 })}
               >
-                <img width={imageWidth} height={imageHeight} src={image} alt={title} />
+                <img width={imageWidth} height={imageHeight} src={image} alt={name} />
               </div>
             </div>
           );
