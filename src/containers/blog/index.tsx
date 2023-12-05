@@ -27,8 +27,8 @@ const Blog = () => {
         <div className="container w-full space-y-3 sm:h-1/2 sm:space-y-8">
           <h2 className="font-cardo text-3.5xl sm:text-6xl">How can you use them?</h2>
           <p className="max-w-md">
-            Explore the diverse examples of charts, created with the Mongabay Charts Tool, directly
-            in our stories.
+            Explore the diverse examples of charts, created with the Mongabay Data Journalism Tools,
+            directly in our stories.
           </p>
         </div>
         <div className="sm:absolute sm:right-0 lg:right-auto lg:translate-x-[130%]">
