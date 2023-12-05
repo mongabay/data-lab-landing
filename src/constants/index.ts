@@ -14,8 +14,8 @@ export const TOOLS = [
       'Seeing patterns of planetary change is profound. Combine environmental, social, and satellite data aggregated from various reputable sources to create maps that add evidence and context to articles quickly.',
     color: COLORS[1],
     image: '/images/tools/earth-atlas.png',
-    imageWidth: 596,
-    imageHeight: 522,
+    imageWidth: 546,
+    imageHeight: 488,
     partners: [
       {
         name: 'Resource Watch',
@@ -34,8 +34,8 @@ export const TOOLS = [
       'Find shared stories of climate impact. Reveal and compare the annual cycles of fire on land and water in the atmosphere at national and sub-national scales.',
     color: COLORS[2],
     image: '/images/tools/fire-weather-almanac.png',
-    imageWidth: 596,
-    imageHeight: 482,
+    imageWidth: 546,
+    imageHeight: 463,
     partners: [
       {
         name: 'Global Forest Watch',
@@ -60,8 +60,8 @@ export const TOOLS = [
       'Mongabay’s global directory of reforestation and tree-planting projects is a starting point for people wanting to learn how to support reforestation.',
     color: COLORS[0],
     image: '/images/tools/reforestation-app.png',
-    imageWidth: 662,
-    imageHeight: 454,
+    imageWidth: 546,
+    imageHeight: 428,
     partners: [
       {
         name: 'Mongabay',
@@ -81,8 +81,8 @@ export const TOOLS = [
       'Agricultural commodities move globally and cause deforestation. Find, follow, and create maps of their trail with data from Trase.earth.',
     color: COLORS[3],
     image: '/images/tools/trade-flow-map.png',
-    imageWidth: 596,
-    imageHeight: 476,
+    imageWidth: 546,
+    imageHeight: 444,
     partners: [
       {
         name: 'Trase',
