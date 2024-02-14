@@ -1,3 +1,4 @@
+import { menuLinks } from '@/constants';
 import HeaderMenu from './menu';
 
 const Header = () => {
@@ -10,9 +11,21 @@ const Header = () => {
             width={182}
             height={27}
             alt="logo"
-            className="object-contain invert"
+            className="object-contain"
           />
-          <HeaderMenu />
+          <ul className="flex gap-10">
+            {menuLinks.map((item) => (
+              <li
+                key={item.title}
+                className="hidden font-open text-base font-semibold leading-normal text-secondary sm:flex"
+              >
+                <a href={item.link}>{item.title}</a>
+              </li>
+            ))}
+            <li>
+              <HeaderMenu />
+            </li>
+          </ul>
         </div>
       </div>
     </header>
