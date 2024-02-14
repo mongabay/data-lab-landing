@@ -9,7 +9,9 @@ import Button from '@/components/button';
 
 import { useData } from '@/utils';
 import Icon from '@/components/icon';
-import ArrowIcon from '@/styles/icons/blog-arrow.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+
+import { menuLinks } from '@/constants';
 
 // Number of posts to show initially
 const INITIAL_MAX_POSTS = 5;
@@ -22,24 +24,26 @@ const Blog = () => {
   }, [posts]);
 
   return (
-    <div className="border-b border-b-light-gray pb-24 sm:pb-32">
-      <div className="flex flex-col gap-6  bg-primary-green pb-28 pt-9 text-white sm:min-h-screen sm:flex-row sm:items-center sm:justify-center sm:gap-0 sm:pb-0 sm:pt-0">
-        <div className="container w-full space-y-3 sm:h-1/2 sm:space-y-8">
-          <h2 className="font-cardo text-3.5xl sm:text-6xl">How can you use them?</h2>
-          <p className="max-w-md">
-            Explore the diverse examples of charts, created with the Mongabay Data Journalism Tools,
-            directly in our stories.
-          </p>
-        </div>
-        <div className="sm:absolute sm:right-0 lg:right-auto lg:translate-x-[130%]">
-          <Icon
-            icon={ArrowIcon}
-            className="ml-5 mt-5 h-[117px] w-[98px] sm:ml-0 sm:mt-0 sm:h-[286px] sm:w-[237px]"
-          />
+    <div className="bg-blog-bg bg-cover bg-center pb-24 sm:pb-32 ">
+      <div className="inline-flex w-full flex-col items-start justify-center gap-[60px] bg-secondary py-5">
+        <div
+          id={menuLinks[1].link.replace('#', '')}
+          className="container font-open text-3xl font-light text-black sm:text-[56px] sm:leading-[72px]"
+        >
+          <h2>Data Journalism</h2>
         </div>
       </div>
+
+      <div className="container my-20 w-full space-y-3 sm:my-[127px] sm:h-1/2 sm:space-y-8">
+        <p className="text-pretty font-open text-lg font-light text-secondary sm:text-[32px] sm:leading-[44px]">
+          The Mongabay Data Studio specializes in creating accurate stories that distill complexity
+          and inform decision making by connecting the dots between science, journalism and
+          technology.
+        </p>
+      </div>
+
       <div className="container mx-auto">
-        <div className="grid -translate-y-20 gap-x-5 gap-y-20 sm:-translate-y-32 sm:grid-cols-12 sm:gap-y-16">
+        <div className="grid gap-x-10 gap-y-10 sm:grid-cols-12 sm:gap-y-20">
           {POSTS?.map((item, index) => (
             <div
               key={item.title}
@@ -54,14 +58,18 @@ const Blog = () => {
           ))}
         </div>
       </div>
-      <div className="flex -translate-y-5 justify-center sm:-translate-y-16">
+      <div className="container mt-20 flex justify-center">
         <Button
-          className={cx('bg-primary-green font-semibold text-white', {
-            '-translate-y-20 border  border-white sm:-translate-y-40': !!error,
-          })}
+          className={cx(
+            'flex w-full items-center justify-center bg-white px-8 py-3 font-semibold text-primary sm:w-auto',
+            {
+              '-translate-y-20 border border-white text-center sm:-translate-y-40': !!error,
+            },
+          )}
           href="https://www.mongabay.com/list/data-lab/"
         >
-          Go to Mongabay Data Lab News
+          Explore Data Stories{' '}
+          <Icon className="ml-3 inline-block h-4 w-4" icon={ArrowUpRightIcon} />
         </Button>
       </div>
     </div>

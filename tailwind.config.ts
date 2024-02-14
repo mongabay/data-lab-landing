@@ -28,8 +28,8 @@ const config: Config = {
         'dark-gray': '#222',
         'medium-gray': '#7E7E7E',
         'light-gray': '#D8D8D8',
-        'primary-green': '#03755E',
-        'primary-green-dark': '#015645',
+        primary: '#0F362E',
+        secondary: '#07F5C5',
       },
       fontFamily: {
         open: ['var(--font-open)'],
@@ -41,6 +41,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'intro-bg': 'url(/images/intro-bg.png)',
+        'blog-bg': 'url(/images/sections-bg.png)',
+        'green-gradient':
+          'radial-gradient(50% 70% at 0% 100%, rgba(13, 85, 71, 1), rgba(var(--primary-rgb), 1))',
       },
     },
   },
