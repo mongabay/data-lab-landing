@@ -9,7 +9,7 @@ const convertData = (data: string) => {
 /** Fetch and format posts  */
 export const useData = () => {
   return useSWR(
-    `https://news.mongabay.com/feed/?post_type=post&feedtype=bulletpoints&list=data-lab`,
+    `https://news.mongabay.com/feed/?post_type=post&feedtype=bulletpoints&list=mongabay-data-studio`,
     async (url: string) => {
       const res = await fetch(url);
 
