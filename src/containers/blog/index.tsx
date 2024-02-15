@@ -43,17 +43,16 @@ const Blog = () => {
           </p>
         </div>
         <div className="container mx-auto">
-          <div className="grid gap-x-10 gap-y-10 sm:grid-cols-12 sm:gap-y-20">
+          <div className="grid gap-x-10 gap-y-10 md:grid-cols-3 md:gap-y-20">
             {POSTS?.map((item, index) => (
               <div
                 key={item.title}
                 className={cx({
-                  'sm:col-span-7 sm:row-span-5': index === 0,
-                  'sm:col-span-5 sm:row-span-5': index === 1,
-                  'sm:col-span-4 sm:row-span-3': index > 1,
+                  'md:col-span-2': index === 0,
+                  'md:col-span-1': index > 0,
                 })}
               >
-                <Card {...item} />
+                <Card {...item} index={index} />
               </div>
             ))}
           </div>
@@ -61,16 +60,16 @@ const Blog = () => {
         <div className="container mt-20 flex justify-center">
           <Button
             className={cx(
-              'flex w-full items-center justify-center bg-white px-8 py-3 font-semibold text-primary sm:w-auto',
+              'bg-white text-primary transition-colors duration-300 hover:bg-[#E6F1EF]',
               {
-                '-translate-y-20 border border-white text-center sm:-translate-y-40': !!error,
+                '-translate-y-20 border border-white sm:-translate-y-40': !!error,
               },
             )}
             href="https://www.mongabay.com/list/data-lab/"
           >
             Explore Data Stories{' '}
             <Icon
-              className="ml-3 inline-block h-4 w-4 fill-primary stroke-primary"
+              className="ml-8 inline-block h-4 w-4 fill-primary stroke-primary"
               icon={ArrowUpRightIcon}
             />
           </Button>

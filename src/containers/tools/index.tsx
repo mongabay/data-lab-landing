@@ -1,11 +1,14 @@
+import './index.css';
+
 import cx from 'classnames';
 
 import Button from '@/components/button';
 import { TOOLS, menuLinks } from '@/constants';
+import classNames from 'classnames';
 
 const Tools = () => {
   return (
-    <div className="">
+    <div>
       <div className="sticky top-0 z-50 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
         <div
           id={menuLinks[0].link.replace('#', '')}
@@ -24,7 +27,7 @@ const Tools = () => {
         {TOOLS.map(
           (
             {
-              color,
+              id,
               image,
               imageWidth,
               imageHeight,
@@ -61,11 +64,11 @@ const Tools = () => {
                     {description}
                   </p>
                   <Button
-                    style={{
-                      backgroundColor: color,
-                    }}
                     href={url}
-                    className="relative z-10 w-full px-8 py-3 text-center text-sm text-white sm:w-auto sm:text-base"
+                    className={classNames(
+                      'relative z-10 text-sm text-white transition-colors duration-300 sm:text-base',
+                      id,
+                    )}
                   >
                     {buttonText}
                   </Button>

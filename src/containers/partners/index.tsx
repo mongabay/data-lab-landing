@@ -71,7 +71,7 @@ const Partners = () => {
         {maxPartners < PEOPLE.length && (
           <div className="mt-16 flex justify-center sm:mt-28">
             <Button
-              className="w-full border border-dark-gray bg-white text-dark-gray sm:w-auto"
+              className="border border-dark-gray bg-white text-dark-gray transition-colors duration-300 hover:bg-[#E6F1EF]"
               onClick={handleLoadMore}
             >
               Load more

@@ -30,7 +30,7 @@ export const TOOLS = [
     icon: SatelliteIcon,
   },
   {
-    id: 'fire-weather-almanac',
+    id: 'fire-weather',
     name: 'Fire Weather Almanac',
     subtitle: 'Fire weather charts',
     description:
@@ -83,7 +83,7 @@ export const TOOLS = [
     icon: ReforestationIcon,
   },
   {
-    id: 'trade-flow-map',
+    id: 'trade-flow',
     name: 'Trade Flow Map',
     subtitle: 'Supply chain data tool',
     description:
