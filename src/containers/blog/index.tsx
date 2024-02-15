@@ -66,7 +66,7 @@ const Blog = () => {
               '-translate-y-20 border border-white text-center sm:-translate-y-40': !!error,
             },
           )}
-          href="https://www.mongabay.com/list/data-lab/"
+          href="https://www.mongabay.com/list/mongabay-data-studio/"
         >
           Explore Data Stories{' '}
           <Icon className="ml-3 inline-block h-4 w-4" icon={ArrowUpRightIcon} />
