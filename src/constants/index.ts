@@ -14,8 +14,8 @@ export const TOOLS = [
       'Seeing patterns of planetary change is profound. Combine environmental, social, and satellite data aggregated from various reputable sources to create maps that add evidence and context to articles quickly.',
     color: COLORS[1],
     image: '/images/tools/earth-atlas.png',
-    imageWidth: 546,
-    imageHeight: 488,
+    imageWidth: 545,
+    imageHeight: 515,
     partners: [
       {
         name: 'Resource Watch',
@@ -25,6 +25,7 @@ export const TOOLS = [
         invert: false,
       },
     ],
+    buttonText: 'Explore the Atlas',
     url: 'https://maps.mongabay.com',
     icon: SatelliteIcon,
   },
@@ -53,6 +54,7 @@ export const TOOLS = [
         invert: false,
       },
     ],
+    buttonText: 'Explore the Charts',
     url: 'https://charts.mongabay.com',
     icon: FireIcon,
   },
@@ -63,8 +65,8 @@ export const TOOLS = [
       'Mongabay’s global directory of reforestation and tree-planting projects is a starting point for people wanting to learn how to support reforestation.',
     color: COLORS[0],
     image: '/images/tools/reforestation-app.png',
-    imageWidth: 546,
-    imageHeight: 428,
+    imageWidth: 545,
+    imageHeight: 472,
     partners: [
       {
         name: 'Mongabay',
@@ -74,6 +76,7 @@ export const TOOLS = [
         invert: true,
       },
     ],
+    buttonText: 'Explore the Atlas',
     url: 'https://reforestation.app',
     icon: ReforestationIcon,
   },
@@ -95,7 +98,23 @@ export const TOOLS = [
         invert: false,
       },
     ],
+    buttonText: 'Explore Trade Flows',
     url: 'https://chains.mongabay.com',
     icon: SupplyIcon,
+  },
+];
+
+export const menuLinks = [
+  {
+    title: 'Data Tools',
+    link: '#data-tools',
+  },
+  {
+    title: 'Data Journalism',
+    link: '#data-journalism',
+  },
+  {
+    title: 'People & Partners',
+    link: '#people-partners',
   },
 ];

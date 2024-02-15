@@ -7,7 +7,7 @@ import { Article } from '@/types/article';
 
 export type CardProps = Article;
 
-const Card = ({ date, description, image, title, url }: CardProps) => {
+const Card = ({ date, image, title, url, author }: CardProps) => {
   const dateText = useMemo(
     () =>
       new Date(date).toLocaleDateString('en-UK', {
@@ -19,8 +19,8 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
   );
 
   return (
-    <div className="group space-y-3 font-open text-dark-gray">
-      <div className="flex items-center justify-center pb-5">
+    <div className="group space-y-4 font-open text-white">
+      <div className="flex items-center justify-center overflow-hidden rounded-[32px]">
         <img
           className="h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:brightness-75"
           src={image}
@@ -38,21 +38,18 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
           </>
         </Button>
       </div>
-      <p className="font-open text-base text-medium-gray">{dateText}</p>
       <a
-        className="block font-cardo text-2xl leading-tight sm:text-[28px]"
+        className="block font-cardo text-xl leading-tight sm:text-[28px]"
         href={url}
         rel="noopener noreferrer"
         target="_blank"
       >
         {title}
       </a>
-      <div
-        className="line-clamp-3 leading-relaxed"
-        dangerouslySetInnerHTML={{ __html: description }}
-        {...{ inert: '' }}
-      />
-      <Button
+      <p className="font-open text-xs font-normal uppercase text-white sm:leading-[14.40px]">
+        {dateText} BY <span className="ml-2 font-bold uppercase leading-none">{author}</span>
+      </p>
+      {/* <Button
         target="_blank"
         className="block bg-white pl-0 font-semibold text-dark-gray underline transition-all duration-300 sm:hidden"
         href={url}
@@ -61,7 +58,7 @@ const Card = ({ date, description, image, title, url }: CardProps) => {
           Go to article
           <Icon className="ml-3 inline-block h-2.5 w-2.5" icon={ArrowUpRightIcon} />
         </>
-      </Button>
+      </Button> */}
     </div>
   );
 };

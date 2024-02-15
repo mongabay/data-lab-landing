@@ -14,7 +14,7 @@ const Button = ({ children, className, ...props }: ButtonProps | AnchorProps) =>
   const aProps = props as AnchorProps;
 
   const c = cx(
-    'inline-block rounded-3xl px-5 py-2.5 focus-visible:outline-primary-green focus-visible:outline-offset-4',
+    'inline-block rounded-3xl px-5 py-2.5 focus-visible:outline-primary focus-visible:outline-offset-4',
     className,
     buttonProps.disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
   );
