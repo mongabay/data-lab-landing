@@ -13,7 +13,7 @@ const accordionItems = [
   {
     title: 'What does the Mongabay Data Studio do?',
     content: (
-      <div className="flex gap-x-12">
+      <div className="flex flex-col gap-y-6 sm:flex-row sm:gap-x-12">
         <div className="flex-1 space-y-6">
           <p className="">
             Mongabay specializes in <span className="font-bold">data-driven storytelling</span> that
@@ -36,30 +36,32 @@ const accordionItems = [
             </li>
           </ul>
         </div>
-        <ul className="flex-1 list-disc space-y-4">
-          <li>
-            Harnessing the growing capacity of{' '}
-            <span className="font-bold">artificial intelligence</span> to detect and predict land
-            use change and volumes in trade of commodities like minerals, timber and palm oil.
-          </li>
-          <li>
-            Tapping into <span className="font-bold">on-the-ground journalism</span> networks in
-            combination with <span className="font-bold">scientific research</span> to fill
-            knowledge gaps about environmental challenges and solutions.
-          </li>
-          <li>
-            Developing a new generation of{' '}
-            <span className="font-bold">scientific communicators</span> through projects focused on
-            training, networking and mentoring an active global community.
-          </li>
-        </ul>
+        <div className="flex-1">
+          <ul className="ml-6 list-disc space-y-4">
+            <li>
+              Harnessing the growing capacity of{' '}
+              <span className="font-bold">artificial intelligence</span> to detect and predict land
+              use change and volumes in trade of commodities like minerals, timber and palm oil.
+            </li>
+            <li>
+              Tapping into <span className="font-bold">on-the-ground journalism</span> networks in
+              combination with <span className="font-bold">scientific research</span> to fill
+              knowledge gaps about environmental challenges and solutions.
+            </li>
+            <li>
+              Developing a new generation of{' '}
+              <span className="font-bold">scientific communicators</span> through projects focused
+              on training, networking and mentoring an active global community.
+            </li>
+          </ul>
+        </div>
       </div>
     ),
   },
   {
     title: 'How to get involved?',
     content: (
-      <div className="flex gap-x-12">
+      <div className="flex flex-col gap-y-6 sm:flex-row sm:gap-x-12">
         <div className="flex-1 space-y-6">
           <p>
             We&apos;re open to collaborating with new partners and financial supporters to{' '}
@@ -97,29 +99,31 @@ const Footer = () => {
   return (
     <footer className="font-open">
       <div className="bg-green-gradient">
-        <div className="inline-flex w-full flex-col items-center justify-start gap-10 px-10 py-20">
-          <div className="flex flex-col justify-center gap-6 sm:items-center">
-            <div className="sm:text-center">
-              <span className="font-open text-3xl font-light leading-10 text-secondary sm:text-6xl">
-                We are nonprofit.
-              </span>
+        <div className="container">
+          <div className="inline-flex w-full flex-col items-center justify-start gap-10 py-20">
+            <div className="flex flex-col justify-center gap-6 sm:items-center">
+              <div className="sm:text-center">
+                <span className="font-open text-3xl font-light leading-10 text-secondary sm:text-6xl">
+                  We are nonprofit.
+                </span>
+              </div>
+              <div className="max-w-96 font-open text-base font-normal leading-snug text-secondary sm:text-center">
+                Help us tell stories of biodiversity loss, climate change & socio-environmental
+                injustice.
+              </div>
             </div>
-            <div className="max-w-96 font-open text-base font-normal leading-snug text-secondary sm:text-center">
-              Help us tell stories of biodiversity loss, climate change & socio-environmental
-              injustice.
+            <div className="flex w-full items-center justify-center gap-8 py-3">
+              <Button
+                className="bg-secondary text-primary transition-colors duration-300 hover:bg-[#1ADAB4]"
+                href="https://news.mongabay.com/donate/"
+              >
+                Donate
+                <Icon
+                  icon={ArrowUpRightIcon}
+                  className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
+                />
+              </Button>
             </div>
-          </div>
-          <div className="flex w-full items-center justify-center gap-8 px-8 py-3">
-            <Button
-              className="bg-secondary text-primary transition-colors duration-300 hover:bg-[#1ADAB4]"
-              href="https://news.mongabay.com/donate/"
-            >
-              Donate
-              <Icon
-                icon={ArrowUpRightIcon}
-                className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
-              />
-            </Button>
           </div>
         </div>
       </div>
@@ -146,7 +150,7 @@ const Footer = () => {
                   value={`item-${index}`}
                 >
                   <AccordionHeader className="flex w-full items-center justify-between">
-                    <span className="text-start font-open text-xl font-light sm:text-3xl sm:leading-10">
+                    <span className="pr-4 text-start font-open text-xl font-light sm:text-3xl sm:leading-10">
                       {title}
                     </span>
                   </AccordionHeader>
@@ -160,26 +164,28 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="gap-10 space-y-10 bg-emerald-700 px-10 py-20 font-open">
-        <div className="flex flex-col justify-center gap-6 sm:items-center">
-          <div className="text-3xl font-light text-white sm:text-center sm:text-6xl">
-            Do you have questions?
+      <div className="bg-emerald-700">
+        <div className="container gap-10 space-y-10 py-20 font-open">
+          <div className="flex flex-col justify-center gap-6 sm:items-center">
+            <div className="text-3xl font-light text-white sm:text-center sm:text-6xl">
+              Do you have questions?
+            </div>
+            <div className="text-base font-normal text-white sm:text-center">
+              We are here to help and answer any enquiries you may have.
+            </div>
           </div>
-          <div className="text-base font-normal text-white sm:text-center">
-            We are here to help and answer any enquiries you may have.
+          <div className="flex justify-center">
+            <Button
+              href="https://www.mongabay.com/contact/"
+              className="bg-white text-emerald-700 transition-colors duration-300 hover:bg-[#E6F1EF]"
+            >
+              Get in Touch{' '}
+              <Icon
+                icon={ArrowUpRightIcon}
+                className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
+              />
+            </Button>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <Button
-            href="https://www.mongabay.com/contact/"
-            className="bg-white text-emerald-700 transition-colors duration-300 hover:bg-[#E6F1EF]"
-          >
-            Get in Touch{' '}
-            <Icon
-              icon={ArrowUpRightIcon}
-              className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
-            />
-          </Button>
         </div>
       </div>
 
