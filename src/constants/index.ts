@@ -104,7 +104,6 @@ export const TOOLS = [
   },
 ];
 
-
 export const menuLinks = [
   {
     title: 'Data Tools',

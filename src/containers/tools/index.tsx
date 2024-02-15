@@ -16,13 +16,9 @@ const Tools = () => {
       </div>
       <div className="container my-20 space-y-20 text-dark-gray sm:my-[127px] sm:space-y-40">
         <div>
-          <p className="hidden max-w-[680px] font-open text-[32px] font-light leading-[44px] text-black sm:block">
+          <p className="max-w-[680px] font-open text-2xl font-light leading-loose text-black sm:text-[32px] sm:leading-[44px]">
             Mongabay is developing a suite of accessible visualization tools designed to empower
             journalists to create stories backed by accurate data sources.
-          </p>
-          <p className="font-open text-2xl font-light leading-loose sm:hidden">
-            The Mongabay Data Studio bridges the divide between environmental science and action by
-            developing impactful tools and enabling data journalism.
           </p>
         </div>
         {TOOLS.map(

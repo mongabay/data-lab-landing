@@ -132,7 +132,7 @@ const Footer = () => {
             <AccordionRoot type="multiple">
               {accordionItems.map(({ title, content }, index) => (
                 <AccordionItem
-                  key="title"
+                  key={title}
                   className="space-y-6 border-b border-primary py-10 last-of-type:border-b-0"
                   value={`item-${index}`}
                 >
@@ -226,7 +226,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/mongabay/"
+                  href="https://www.youtube.com/@MongabayTV/featured"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -235,7 +235,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/mongabay/"
+                  href="https://www.twitter.com/mongabay"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -244,7 +244,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/mongabay/"
+                  href="https://www.facebook.com/mongabay"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
