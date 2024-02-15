@@ -6,7 +6,7 @@ import { TOOLS, menuLinks } from '@/constants';
 const Tools = () => {
   return (
     <div className="">
-      <div className="inline-flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
+      <div className="sticky top-0 z-50 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
         <div
           id={menuLinks[0].link.replace('#', '')}
           className="container font-open text-[32px] font-light text-white sm:text-[56px] sm:leading-[72px]"
@@ -14,7 +14,7 @@ const Tools = () => {
           <h2>Data Tools</h2>
         </div>
       </div>
-      <div className="container my-20 space-y-20 text-dark-gray sm:my-[127px] sm:space-y-40">
+      <div className="container space-y-20 py-20 text-dark-gray sm:space-y-40 sm:py-[127px]">
         <div>
           <p className="max-w-[680px] font-open text-2xl font-light leading-loose text-black sm:text-[32px] sm:leading-[44px]">
             Mongabay is developing a suite of accessible visualization tools designed to empower

@@ -1,3 +1,5 @@
+import './index.css';
+
 import Button from '@/components/button';
 import Icon from '@/components/icon';
 import { useMemo } from 'react';
@@ -21,13 +23,25 @@ const Card = ({ date, image, title, url, author }: CardProps) => {
   return (
     <div className="group space-y-4 font-open text-white">
       <div className="flex items-center justify-center overflow-hidden rounded-[32px]">
-        <img
-          className="h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:brightness-75"
-          src={image}
-          alt={title}
-          width={300}
-          height={300}
-        />
+        {/* <div className="h-[300px] w-full bg-white/20 "> */}
+        <div
+          className="h-[300px] w-full object-cover"
+          style={{
+            background: `linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), url('${image}'), lightgray 50% / cover no-repeat, #0F362E`,
+            filter: 'grayscale(90%)',
+            backgroundBlendMode: 'overlay, lighten, normal',
+          }}
+        >
+          {/* <div className="h-full w-full bg-primary"></div> */}
+          {/* <img
+            className="card-image h-full w-full object-cover bg-blend-darken transition-all duration-300 ease-in-out group-hover:brightness-75"
+            src={image}
+            alt={title}
+            width={300}
+            height={300}
+          /> */}
+        </div>
+        {/* </div> */}
         <Button
           className="absolute hidden bg-white text-dark-gray opacity-0 transition-all duration-300 focus-within:opacity-100 group-hover:opacity-100 sm:block"
           href={url}
