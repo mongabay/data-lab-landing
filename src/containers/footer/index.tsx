@@ -165,7 +165,11 @@ const Footer = () => {
             href="mailto:info@mongabay.org"
             className="w-full bg-white text-center text-base font-semibold leading-normal text-emerald-700 sm:w-auto"
           >
-            Get in Touch <Icon icon={ArrowUpRightIcon} className="mb-1 ml-8 inline h-4 w-4" />
+            Get in Touch{' '}
+            <Icon
+              icon={ArrowUpRightIcon}
+              className="mb-1 ml-8 inline h-4 w-4 fill-primary stroke-primary"
+            />
           </Button>
         </div>
       </div>

@@ -23,7 +23,6 @@ const Card = ({ date, image, title, url, author }: CardProps) => {
   return (
     <div className="group space-y-4 font-open text-white">
       <div className="flex items-center justify-center overflow-hidden rounded-[32px]">
-        {/* <div className="h-[300px] w-full bg-white/20 "> */}
         <div
           className="h-[300px] w-full object-cover"
           style={{
@@ -34,7 +33,6 @@ const Card = ({ date, image, title, url, author }: CardProps) => {
             backgroundPosition: 'center',
           }}
         >
-          {/* <div className="h-full w-full bg-primary"></div> */}
           {/* <img
             className="card-image h-full w-full object-cover bg-blend-darken transition-all duration-300 ease-in-out group-hover:brightness-75"
             src={image}
@@ -43,14 +41,16 @@ const Card = ({ date, image, title, url, author }: CardProps) => {
             height={300}
           /> */}
         </div>
-        {/* </div> */}
         <Button
-          className="absolute hidden bg-white text-dark-gray opacity-0 transition-all duration-300 focus-within:opacity-100 group-hover:opacity-100 sm:block"
+          className="absolute hidden bg-white text-primary opacity-0 transition-all duration-300 focus-within:opacity-100 group-hover:opacity-100 sm:block"
           href={url}
         >
           <>
             Go to article
-            <Icon className="ml-3 inline-block h-2.5 w-2.5" icon={ArrowUpRightIcon} />
+            <Icon
+              className="ml-3 inline-block h-2.5 w-2.5  fill-primary stroke-primary"
+              icon={ArrowUpRightIcon}
+            />
           </>
         </Button>
       </div>
@@ -63,7 +63,9 @@ const Card = ({ date, image, title, url, author }: CardProps) => {
         {title}
       </a>
       <p className="font-open text-xs font-normal uppercase text-white sm:leading-[14.40px]">
-        {dateText} BY <span className="ml-2 font-bold uppercase leading-none">{author}</span>
+        {dateText} <span className="ml-3">BY</span>
+        {'  '}
+        <span className="font-bold uppercase leading-none">{author}</span>
       </p>
       {/* <Button
         target="_blank"

@@ -69,7 +69,10 @@ const Blog = () => {
             href="https://www.mongabay.com/list/data-lab/"
           >
             Explore Data Stories{' '}
-            <Icon className="ml-3 inline-block h-4 w-4" icon={ArrowUpRightIcon} />
+            <Icon
+              className="ml-3 inline-block h-4 w-4 fill-primary stroke-primary"
+              icon={ArrowUpRightIcon}
+            />
           </Button>
         </div>
       </div>

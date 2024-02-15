@@ -70,7 +70,11 @@ const HeaderMenu = () => {
               href="mailto:info@mongabay.org"
               className="border border-dark-gray bg-dark-gray text-white"
             >
-              Get in touch <Icon icon={ArrowUpRightIcon} className="ml-8 inline h-4 w-4" />
+              Get in touch{' '}
+              <Icon
+                icon={ArrowUpRightIcon}
+                className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
+              />
             </Button>
           </div>
         </div>
