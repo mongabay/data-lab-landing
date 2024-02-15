@@ -26,7 +26,7 @@ const Partners = () => {
 
   return (
     <div className="text-dark-gray">
-      <div className="inline-flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
+      <div className="sticky top-0 z-50 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
         <div
           id={menuLinks[2].link.replace('#', '')}
           className="container font-open text-[32px] font-light text-white sm:text-[56px] sm:leading-[72px]"
@@ -34,7 +34,7 @@ const Partners = () => {
           <h2>People and Partner Companies</h2>
         </div>
       </div>
-      <div className="container my-20 sm:my-[127px]">
+      <div className="container py-20 sm:py-[127px]">
         <div>
           <p className="max-w-[680px] font-open text-2xl font-light text-black sm:text-[32px] sm:leading-[44px]">
             Mongabay Data Studio connects a global network of journalists, technologists,
@@ -71,7 +71,7 @@ const Partners = () => {
         {maxPartners < PEOPLE.length && (
           <div className="mt-16 flex justify-center sm:mt-28">
             <Button
-              className="w-full border border-dark-gray bg-white text-dark-gray sm:w-auto"
+              className="border border-dark-gray bg-white text-dark-gray transition-colors duration-300 hover:bg-[#E6F1EF]"
               onClick={handleLoadMore}
             >
               Load more

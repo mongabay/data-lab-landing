@@ -1,12 +1,15 @@
+import './index.css';
+
 import cx from 'classnames';
 
 import Button from '@/components/button';
 import { TOOLS, menuLinks } from '@/constants';
+import classNames from 'classnames';
 
 const Tools = () => {
   return (
-    <div className="">
-      <div className="inline-flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
+    <div>
+      <div className="sticky top-0 z-50 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
         <div
           id={menuLinks[0].link.replace('#', '')}
           className="container font-open text-[32px] font-light text-white sm:text-[56px] sm:leading-[72px]"
@@ -14,7 +17,7 @@ const Tools = () => {
           <h2>Data Tools</h2>
         </div>
       </div>
-      <div className="container my-20 space-y-20 text-dark-gray sm:my-[127px] sm:space-y-40">
+      <div className="container space-y-20 py-20 text-dark-gray sm:space-y-40 sm:py-[127px]">
         <div>
           <p className="max-w-[680px] font-open text-2xl font-light leading-loose text-black sm:text-[32px] sm:leading-[44px]">
             Mongabay is developing a suite of accessible visualization tools designed to empower
@@ -24,7 +27,7 @@ const Tools = () => {
         {TOOLS.map(
           (
             {
-              color,
+              id,
               image,
               imageWidth,
               imageHeight,
@@ -61,11 +64,11 @@ const Tools = () => {
                     {description}
                   </p>
                   <Button
-                    style={{
-                      backgroundColor: color,
-                    }}
                     href={url}
-                    className="relative z-10 w-full px-8 py-3 text-center text-sm text-white sm:w-auto sm:text-base"
+                    className={classNames(
+                      'relative z-10 text-sm text-white transition-colors duration-300 sm:text-base',
+                      id,
+                    )}
                   >
                     {buttonText}
                   </Button>

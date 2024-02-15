@@ -13,7 +13,7 @@ export const metadata = {
 
 export default async function Home() {
   return (
-    <main className="max-w-[100vw] overflow-x-hidden bg-white">
+    <main className="max-w-[100vw] bg-white">
       <Header />
       <Intro />
       <Tools />
