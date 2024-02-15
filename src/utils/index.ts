@@ -20,7 +20,7 @@ export const useData = () => {
         description: item['content:encoded']._cdata,
         image: Array.isArray(item.enclosure)
           ? item.enclosure?.find((item: any) => item._attributes.type.startsWith('image'))
-            ?._attributes.url
+              ?._attributes.url
           : item.enclosure?._attributes?.url,
         url: item.link._text,
         author: item.author?._cdata,
