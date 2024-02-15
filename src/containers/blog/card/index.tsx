@@ -27,9 +27,11 @@ const Card = ({ date, image, title, url, author }: CardProps) => {
         <div
           className="h-[300px] w-full object-cover"
           style={{
-            background: `linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), url('${image}'), lightgray 50% / cover no-repeat, #0F362E`,
+            background: `linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), url('${image}'), #0F362E 50%`,
             filter: 'grayscale(90%)',
             backgroundBlendMode: 'overlay, lighten, normal',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           {/* <div className="h-full w-full bg-primary"></div> */}
