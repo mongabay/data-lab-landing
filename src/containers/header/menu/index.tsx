@@ -42,7 +42,7 @@ const HeaderMenu = () => {
             <span className="sr-only">close navigation menu</span>
             <Icon icon={XIcon} className="h-[18px] w-[18px] fill-dark-gray" />
           </button>
-          <p className="font-cardo text-3xl font-bold">Mongabay Chart Tools</p>
+          <p className="font-open text-5xl font-light leading-[56px]">Mongabay Data Studio</p>
           <ul className="space-y-6">
             {TOOLS.map(({ name, url, icon, color }) => (
               <li key={name}>
@@ -50,7 +50,7 @@ const HeaderMenu = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={url}
-                  className="flex items-center gap-4 rounded-3xl font-open font-semibold uppercase hover:underline focus-visible:outline-offset-4 focus-visible:outline-primary"
+                  className="flex items-center gap-4 rounded-3xl font-open text-2xl font-light decoration-1 underline-offset-2 hover:underline focus-visible:outline-offset-4 focus-visible:outline-primary"
                 >
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-full"
@@ -67,10 +67,14 @@ const HeaderMenu = () => {
           </ul>
           <div className="flex flex-1 items-end gap-3 text-sm font-semibold">
             <Button
-              href="mailto:info@mongabay.org"
-              className="border border-dark-gray bg-dark-gray text-white"
+              href="https://www.mongabay.com/contact/"
+              className="border border-dark-gray bg-dark-gray text-white hover:bg-black/80"
             >
-              Get in touch <Icon icon={ArrowUpRightIcon} className="ml-8 inline h-4 w-4" />
+              Get in touch{' '}
+              <Icon
+                icon={ArrowUpRightIcon}
+                className="ml-8 inline h-4 w-4 fill-white stroke-white"
+              />
             </Button>
           </div>
         </div>

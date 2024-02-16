@@ -9,6 +9,18 @@
 
   --primary-rgb: 15, 54, 46;
   --secondary-rgb: 7, 245, 197;
+
+  --earth-atlas: #184b95;
+  --earth-atlas-dark: #06306e;
+
+  --fire-weather: #a01200;
+  --fire-weather-dark: #6d0e02;
+
+  --reforestation-app: #03755e;
+  --reforestation-app-dark: #004b3c;
+
+  --trade-flow: #7e56d8;
+  --trade-flow-dark: #4a22a5;
 }
 
 @media (prefers-color-scheme: light) {

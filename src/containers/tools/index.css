@@ -1,0 +1,27 @@
+.earth-atlas {
+  background-color: var(--earth-atlas);
+}
+.earth-atlas:hover {
+  background-color: var(--earth-atlas-dark);
+}
+
+.fire-weather {
+  background-color: var(--fire-weather);
+}
+.fire-weather:hover {
+  background-color: var(--fire-weather-dark);
+}
+
+.reforestation-app {
+  background-color: var(--reforestation-app);
+}
+.reforestation-app:hover {
+  background-color: var(--reforestation-app-dark);
+}
+
+.trade-flow {
+  background-color: var(--trade-flow);
+}
+.trade-flow:hover {
+  background-color: var(--trade-flow-dark);
+}

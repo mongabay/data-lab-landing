@@ -25,7 +25,7 @@ const AccordionHeader: FC<PropsWithChildren<AccordionHeaderProps>> = ({ children
         {children}
         <Icon
           icon={ChevronDownIcon}
-          className="inline h-[30px] w-[30px] stroke-primary group-data-[state='open']:rotate-180 sm:h-12 sm:w-12"
+          className="inline h-[30px] w-[30px] flex-shrink-0 stroke-primary group-data-[state='open']:rotate-180 sm:h-12 sm:w-12"
           aria-hidden
         />
       </Accordion.Trigger>

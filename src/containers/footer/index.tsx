@@ -13,75 +13,83 @@ const accordionItems = [
   {
     title: 'What does the Mongabay Data Studio do?',
     content: (
-      <div className="space-y-6">
-        <p>
-          Mongabay specializes in <span className="font-bold">data-driven storytelling</span> that
-          leverages environmental science to produce{' '}
-          <span className="font-bold">original, timely, actionable news</span>. This capability
-          includes building novel technologies, producing impactful journalism and mobilizing
-          interdisciplinary teams to tackle complex challenges. The Mongabay Data Studio is
-          especially interested in taking on projects that are:
-        </p>
-        <ul className="ml-6 list-disc space-y-4">
-          <li>
-            Surfacing patterns of environmental change by leveraging{' '}
-            <span className="font-bold">near-real time satellite imagery</span> to add evidence and
-            urgency to news.
-          </li>
-          <li>
-            Generating <span className="font-bold">high-resolution 3D imagery</span> and{' '}
-            <span className="font-bold">video</span> to create compelling, immersive visual
-            storytelling.
-          </li>
-          <li>
-            Harnessing the growing capacity of{' '}
-            <span className="font-bold">artificial intelligence</span> to detect and predict land
-            use change
-          </li>
-          and volumes in trade of commodities like minerals, timber and palm oil.
-          <li>
-            Tapping into <span className="font-bold">on-the-ground journalism</span> networks in
-            combination with <span className="font-bold">scientific research</span> to fill
-          </li>
-          knowledge gaps about environmental challenges and solutions.
-          <li>
-            Developing a new generation of{' '}
-            <span className="font-bold">scientific communicators</span> through projects focused on
-            training,
-          </li>
-          networking and mentoring an active global community.
-        </ul>
+      <div className="flex flex-col gap-y-6 sm:flex-row sm:gap-x-12">
+        <div className="flex-1 space-y-6">
+          <p className="">
+            Mongabay specializes in <span className="font-bold">data-driven storytelling</span> that
+            leverages environmental science to produce{' '}
+            <span className="font-bold">original, timely, actionable news</span>. This capability
+            includes building novel technologies, producing impactful journalism and mobilizing
+            interdisciplinary teams to tackle complex challenges. The Mongabay Data Studio is
+            especially interested in taking on projects that are:
+          </p>
+          <ul className="ml-6 list-disc space-y-4">
+            <li>
+              Surfacing patterns of environmental change by leveraging{' '}
+              <span className="font-bold">near-real time satellite imagery</span> to add evidence
+              and urgency to news.
+            </li>
+            <li>
+              Generating <span className="font-bold">high-resolution 3D imagery</span> and{' '}
+              <span className="font-bold">video</span> to create compelling, immersive visual
+              storytelling.
+            </li>
+          </ul>
+        </div>
+        <div className="flex-1">
+          <ul className="ml-6 list-disc space-y-4">
+            <li>
+              Harnessing the growing capacity of{' '}
+              <span className="font-bold">artificial intelligence</span> to detect and predict land
+              use change and volumes in trade of commodities like minerals, timber and palm oil.
+            </li>
+            <li>
+              Tapping into <span className="font-bold">on-the-ground journalism</span> networks in
+              combination with <span className="font-bold">scientific research</span> to fill
+              knowledge gaps about environmental challenges and solutions.
+            </li>
+            <li>
+              Developing a new generation of{' '}
+              <span className="font-bold">scientific communicators</span> through projects focused
+              on training, networking and mentoring an active global community.
+            </li>
+          </ul>
+        </div>
       </div>
     ),
   },
   {
     title: 'How to get involved?',
     content: (
-      <div className="space-y-6">
-        <p>
-          We&apos;re open to collaborating with new partners and financial supporters to{' '}
-          <span className="font-bold">scale up our unique data journalism work</span>. Here are a
-          few ways to collaborate with and support the Mongabay Data Studio:
-        </p>
-        <p>
-          <span className="font-bold">Pitch a story:</span> Mongabay Data Studio includes a global
-          network of journalists who work in collaboration with technologists, researchers and
-          designers capable of gathering information from the world&apos;s most remote corners via
-          local sources and advanced Earth observation data. Journalists can pitch data-driven
-          reporting for any of our Special Reporting Projects
-        </p>
-        <p>
-          <span className="font-bold">Build with us:</span> We work with data from reputable
-          platforms and build tools that enhance transparency and facilitate access to vital
-          information across sectors. If you have credible data that needs to be more accessible,
-          please contact us by email.
-        </p>
-        <p>
-          <span className="font-bold">Propose new research:</span> Mongabay Data Studio can be
-          engaged to create bespoke research reports. Our project-led nature enables diverse experts
-          to coalesce around a specific issue or area to produce new knowledge. If you have research
-          needs, please contact us by email.
-        </p>
+      <div className="flex flex-col gap-y-6 sm:flex-row sm:gap-x-12">
+        <div className="flex-1 space-y-6">
+          <p>
+            We&apos;re open to collaborating with new partners and financial supporters to{' '}
+            <span className="font-bold">scale up our unique data journalism work</span>. Here are a
+            few ways to collaborate with and support the Mongabay Data Studio:
+          </p>
+          <p>
+            <span className="font-bold">Pitch a story:</span> Mongabay Data Studio includes a global
+            network of journalists who work in collaboration with technologists, researchers and
+            designers capable of gathering information from the world&apos;s most remote corners via
+            local sources and advanced Earth observation data. Journalists can pitch data-driven
+            reporting for any of our Special Reporting Projects
+          </p>
+        </div>
+        <div className="flex-1 space-y-6">
+          <p>
+            <span className="font-bold">Build with us:</span> We work with data from reputable
+            platforms and build tools that enhance transparency and facilitate access to vital
+            information across sectors. If you have credible data that needs to be more accessible,
+            please contact us by email.
+          </p>
+          <p>
+            <span className="font-bold">Propose new research:</span> Mongabay Data Studio can be
+            engaged to create bespoke research reports. Our project-led nature enables diverse
+            experts to coalesce around a specific issue or area to produce new knowledge. If you
+            have research needs, please contact us by email.
+          </p>
+        </div>
       </div>
     ),
   },
@@ -91,33 +99,38 @@ const Footer = () => {
   return (
     <footer className="font-open">
       <div className="bg-green-gradient">
-        <div className="inline-flex w-full flex-col items-center justify-start gap-10 px-10 py-20">
-          <div className="flex flex-col justify-center gap-6 sm:items-center">
-            <div className="sm:text-center">
-              <span className="font-open text-3xl font-light leading-10 text-secondary sm:text-6xl">
-                We are nonprofit.
-              </span>
+        <div className="container">
+          <div className="inline-flex w-full flex-col items-center justify-start gap-10 py-20">
+            <div className="flex flex-col justify-center gap-6 sm:items-center">
+              <div className="sm:text-center">
+                <span className="font-open text-[32px] font-light leading-10 text-secondary sm:text-6xl">
+                  We are nonprofit.
+                </span>
+              </div>
+              <div className="max-w-96 font-open text-base font-normal leading-snug text-secondary sm:text-center">
+                Help us tell stories of biodiversity loss, climate change & socio-environmental
+                injustice.
+              </div>
             </div>
-            <div className="max-w-96 font-open text-base font-normal leading-snug text-secondary sm:text-center">
-              Help us tell stories of biodiversity loss, climate change & socio-environmental
-              injustice.
+            <div className="flex w-full items-center justify-center gap-8 py-3">
+              <Button
+                className="bg-secondary text-primary transition-colors duration-300 hover:bg-[#1ADAB4]"
+                href="https://news.mongabay.com/donate/"
+              >
+                Donate
+                <Icon
+                  icon={ArrowUpRightIcon}
+                  className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
+                />
+              </Button>
             </div>
-          </div>
-          <div className="flex w-full items-center justify-center gap-8 px-8 py-3">
-            <Button
-              className="w-full bg-secondary text-center font-open text-base font-semibold leading-normal text-teal-950 sm:w-auto"
-              href="https://donate.mongabay.org/"
-            >
-              Donate
-              <Icon icon={ArrowUpRightIcon} className="ml-8 inline h-4 w-4" />
-            </Button>
           </div>
         </div>
       </div>
       <div className="space-y-10 bg-secondary py-20 text-primary sm:space-y-20">
         <div className="container space-y-10 font-open font-light sm:space-y-20 sm:text-center">
           <div className="sm-space-y-20 max-w-[746px] space-y-10 sm:mx-auto">
-            <h2 className="text-3xl leading-tight sm:text-6xl">
+            <h2 className="text-[32px] leading-tight sm:text-6xl">
               Do you want to learn more and collaborate?
             </h2>
             <p className="text-2xl leading-tight sm:text-3xl">
@@ -137,7 +150,7 @@ const Footer = () => {
                   value={`item-${index}`}
                 >
                   <AccordionHeader className="flex w-full items-center justify-between">
-                    <span className="text-start font-open text-xl font-light sm:text-3xl sm:leading-10">
+                    <span className="pr-4 text-start font-open text-xl font-light sm:text-3xl sm:leading-10">
                       {title}
                     </span>
                   </AccordionHeader>
@@ -151,22 +164,28 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="gap-10 space-y-10 bg-emerald-700 px-10 py-20 font-open">
-        <div className="flex flex-col justify-center gap-6 sm:items-center">
-          <div className="text-3xl font-light text-white sm:text-center sm:text-6xl">
-            Do you have questions?
+      <div className="bg-emerald-700">
+        <div className="container gap-10 space-y-10 py-20 font-open">
+          <div className="flex flex-col justify-center gap-6 sm:items-center">
+            <div className="text-[32px] font-light text-white sm:text-center sm:text-6xl">
+              Do you have questions?
+            </div>
+            <div className="text-base font-normal text-white sm:text-center">
+              We are here to help and answer any enquiries you may have.
+            </div>
           </div>
-          <div className="text-base font-normal text-white sm:text-center">
-            We are here to help and answer any enquiries you may have.
+          <div className="flex justify-center">
+            <Button
+              href="https://www.mongabay.com/contact/"
+              className="bg-white text-emerald-700 transition-colors duration-300 hover:bg-[#E6F1EF]"
+            >
+              Get in Touch{' '}
+              <Icon
+                icon={ArrowUpRightIcon}
+                className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
+              />
+            </Button>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <Button
-            href="mailto:info@mongabay.org"
-            className="w-full bg-white text-center text-base font-semibold leading-normal text-emerald-700 sm:w-auto"
-          >
-            Get in Touch <Icon icon={ArrowUpRightIcon} className="mb-1 ml-8 inline h-4 w-4" />
-          </Button>
         </div>
       </div>
 
@@ -220,6 +239,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/mongabay/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:underline"
                 >
                   LinkedIn
                 </a>
@@ -229,6 +249,7 @@ const Footer = () => {
                   href="https://www.youtube.com/@MongabayTV/featured"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:underline"
                 >
                   Youtube
                 </a>
@@ -238,6 +259,7 @@ const Footer = () => {
                   href="https://www.twitter.com/mongabay"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:underline"
                 >
                   X
                 </a>
@@ -247,6 +269,7 @@ const Footer = () => {
                   href="https://www.facebook.com/mongabay"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:underline"
                 >
                   Facebook
                 </a>

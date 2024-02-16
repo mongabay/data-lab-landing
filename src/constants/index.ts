@@ -30,8 +30,9 @@ export const TOOLS = [
     icon: SatelliteIcon,
   },
   {
-    id: 'fire-weather-almanac',
+    id: 'fire-weather',
     name: 'Fire Weather Almanac',
+    subtitle: 'Fire weather charts',
     description:
       'Find shared stories of climate impact. Reveal and compare the annual cycles of fire on land and water in the atmosphere at national and sub-national scales.',
     color: COLORS[2],
@@ -61,6 +62,7 @@ export const TOOLS = [
   {
     id: 'reforestation-app',
     name: 'Reforestation App',
+    subtitle: 'Transparency in tree-planting',
     description:
       'Mongabay’s global directory of reforestation and tree-planting projects is a starting point for people wanting to learn how to support reforestation.',
     color: COLORS[0],
@@ -81,8 +83,9 @@ export const TOOLS = [
     icon: ReforestationIcon,
   },
   {
-    id: 'trade-flow-map',
+    id: 'trade-flow',
     name: 'Trade Flow Map',
+    subtitle: 'Supply chain data tool',
     description:
       'Agricultural commodities move globally and cause deforestation. Find, follow, and create maps of their trail with data from Trase.earth.',
     color: COLORS[3],
