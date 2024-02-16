@@ -9,17 +9,17 @@ import classNames from 'classnames';
 const Tools = () => {
   return (
     <div>
-      <div className="sticky top-0 z-50 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
+      <div className="sticky top-0 z-20 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
         <div
           id={menuLinks[0].link.replace('#', '')}
-          className="container font-open text-[32px] font-light text-white sm:text-[56px] sm:leading-[72px]"
+          className="container font-open text-[32px] font-light leading-[32px] text-white sm:text-[56px] sm:leading-[72px]"
         >
           <h2>Data Tools</h2>
         </div>
       </div>
       <div className="container space-y-20 py-20 text-dark-gray sm:space-y-40 sm:py-[127px]">
         <div>
-          <p className="max-w-[680px] font-open text-2xl font-light leading-loose text-black sm:text-[32px] sm:leading-[44px]">
+          <p className="max-w-[680px] font-open text-2xl font-light  text-black sm:text-[32px] sm:leading-[44px]">
             Mongabay is developing a suite of accessible visualization tools designed to empower
             journalists to create stories backed by accurate data sources.
           </p>
@@ -66,7 +66,7 @@ const Tools = () => {
                   <Button
                     href={url}
                     className={classNames(
-                      'relative z-10 text-sm text-white transition-colors duration-300 sm:text-base',
+                      'z-10 text-sm text-white transition-colors duration-300 sm:text-base',
                       id,
                     )}
                   >

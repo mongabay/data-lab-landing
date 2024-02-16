@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from 'react';
 const generic = {
   count: 16,
   radius: 40,
-  size: 2.5,
+  size: 2,
   startAngle: 30,
   opacity: 0.3,
 };
@@ -18,7 +18,7 @@ const generic = {
 const tools = {
   count: 4,
   radius: 10,
-  size: 4,
+  size: 3.25,
   startAngle: 30,
   opacity: 1,
 };

@@ -25,10 +25,10 @@ const PartnerCard = ({ name, image, role, company }: Partner) => {
         )}
       </div>
       <div className="pt-6">
-        <div className="cursor-pointer font-cardo text-base capitalize leading-tight sm:mb-4 sm:text-[28px]">
+        <div className="font-cardo text-base font-normal capitalize leading-tight sm:mb-4 sm:text-[28px]">
           {name.toLowerCase()}
         </div>
-        <p className="hidden space-x-3 text-base sm:block">
+        <p className="hidden space-x-3 font-open text-base font-normal sm:block">
           <span>{role}</span>
           <span className="text-xl leading-none">&#x2022;</span>
           <span className="underline">{company}</span>
