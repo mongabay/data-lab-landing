@@ -57,7 +57,7 @@ const Blog = () => {
             ))}
           </div>
         </div>
-        <div className="container mt-20 flex justify-center">
+        <div className="mt-20 flex justify-center">
           <Button
             className={cx(
               'bg-white text-primary transition-colors duration-300 hover:bg-[#E6F1EF]',

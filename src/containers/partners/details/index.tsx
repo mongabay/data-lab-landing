@@ -16,10 +16,10 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
       title={details?.name}
       open={!!details}
       onOpenChange={close}
-      className="bg-dark-gray text-white"
+      className="z-50 bg-black text-white"
       size="full"
     >
-      <div className="flex min-h-full flex-col items-center gap-x-20 gap-y-6 sm:flex-row sm:items-start sm:justify-center">
+      <div className="flex h-full flex-col items-center gap-x-20 gap-y-6 sm:flex-row sm:items-center sm:justify-center">
         <div className="flex shrink-0 items-center justify-center">
           {details?.image ? (
             <img
@@ -53,7 +53,7 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
             href={details?.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex cursor-pointer items-center gap-x-4 !p-0"
+            className="inline-flex cursor-pointer items-center gap-x-4 !p-0 text-white"
           >
             See profile
             <Icon icon={ArrowUpRightIcon} className="h-5 w-5 fill-white stroke-white" />

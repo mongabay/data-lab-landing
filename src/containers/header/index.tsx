@@ -17,7 +17,7 @@ const Header = () => {
             {menuLinks.map((item) => (
               <li
                 key={item.title}
-                className="hidden font-open text-base font-semibold leading-normal text-secondary sm:flex"
+                className="hidden font-open text-base font-semibold leading-normal text-secondary hover:underline hover:underline-offset-2 sm:flex"
               >
                 <a href={item.link}>{item.title}</a>
               </li>

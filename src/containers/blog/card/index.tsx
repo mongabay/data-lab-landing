@@ -26,7 +26,7 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
       <div className="flex items-center justify-center overflow-hidden rounded-[32px]">
         <div
           className={classNames(
-            'aspect-video min-h-[215px] w-full object-cover',
+            'aspect-video min-h-full w-full max-w-full object-cover',
             index === 0 ? 'md:min-h-[350px]' : 'md:min-h-[195px]',
           )}
           style={{

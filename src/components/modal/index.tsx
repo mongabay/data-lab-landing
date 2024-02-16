@@ -32,10 +32,10 @@ const Modal = ({
         <Dialog.Content className="container !pointer-events-auto relative h-full overflow-y-auto py-14 focus-visible:outline-none">
           <Dialog.Close asChild>
             <button
-              className="absolute right-9 top-9 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
+              className="fixed right-10 top-10 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
               aria-label="Close"
             >
-              <Icon className="h-5 w-5 fill-dark-gray" icon={XIcon} />
+              <Icon className="h-3 w-3 fill-dark-gray" icon={XIcon} />
             </button>
           </Dialog.Close>
           {children}
