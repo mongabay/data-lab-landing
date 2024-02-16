@@ -103,7 +103,7 @@ const Footer = () => {
           <div className="inline-flex w-full flex-col items-center justify-start gap-10 py-20">
             <div className="flex flex-col justify-center gap-6 sm:items-center">
               <div className="sm:text-center">
-                <span className="font-open text-3xl font-light leading-10 text-secondary sm:text-6xl">
+                <span className="font-open text-[32px] font-light leading-10 text-secondary sm:text-6xl">
                   We are nonprofit.
                 </span>
               </div>
@@ -130,7 +130,7 @@ const Footer = () => {
       <div className="space-y-10 bg-secondary py-20 text-primary sm:space-y-20">
         <div className="container space-y-10 font-open font-light sm:space-y-20 sm:text-center">
           <div className="sm-space-y-20 max-w-[746px] space-y-10 sm:mx-auto">
-            <h2 className="text-3xl leading-tight sm:text-6xl">
+            <h2 className="text-[32px] leading-tight sm:text-6xl">
               Do you want to learn more and collaborate?
             </h2>
             <p className="text-2xl leading-tight sm:text-3xl">
@@ -167,7 +167,7 @@ const Footer = () => {
       <div className="bg-emerald-700">
         <div className="container gap-10 space-y-10 py-20 font-open">
           <div className="flex flex-col justify-center gap-6 sm:items-center">
-            <div className="text-3xl font-light text-white sm:text-center sm:text-6xl">
+            <div className="text-[32px] font-light text-white sm:text-center sm:text-6xl">
               Do you have questions?
             </div>
             <div className="text-base font-normal text-white sm:text-center">

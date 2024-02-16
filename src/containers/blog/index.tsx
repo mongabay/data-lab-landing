@@ -36,7 +36,7 @@ const Blog = () => {
 
       <div className="container pb-20 sm:pb-[127px]">
         <div className="my-20  w-full max-w-[680px] space-y-3 sm:my-[127px] sm:h-1/2 sm:space-y-8">
-          <p className="text-pretty font-open text-lg font-light text-secondary sm:text-[32px] sm:leading-[44px]">
+          <p className="text-pretty font-open text-2xl font-light leading-[32px] text-secondary sm:text-[32px] sm:leading-[44px]">
             The Mongabay Data Studio specializes in creating accurate stories that distill
             complexity and inform decision making by connecting the dots between science, journalism
             and technology.

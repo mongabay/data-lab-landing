@@ -42,7 +42,7 @@ const HeaderMenu = () => {
             <span className="sr-only">close navigation menu</span>
             <Icon icon={XIcon} className="h-[18px] w-[18px] fill-dark-gray" />
           </button>
-          <p className="font-open text-5xl font-light">Mongabay Data Studio</p>
+          <p className="font-open text-5xl font-light leading-[56px]">Mongabay Data Studio</p>
           <ul className="space-y-6">
             {TOOLS.map(({ name, url, icon, color }) => (
               <li key={name}>
