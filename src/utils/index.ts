@@ -9,7 +9,7 @@ const convertData = (data: string) => {
 /** Fetch and format posts  */
 export const useData = () => {
   return useSWR(
-    `https://news.mongabay.com/feed/?post_type=post&feedtype=bulletpoints&list=mongabay-data-studio`,
+    `https://news.mongabay.com/feed/?post_type=post&feedtype=bulletpoints&topic=mongabay-data-studio`,
     async (url: string) => {
       const res = await fetch(url);
 
@@ -23,7 +23,7 @@ export const useData = () => {
               ?._attributes.url
           : item.enclosure?._attributes?.url,
         url: item.link._text,
-        author: item.author?._cdata,
+        author: item.creator?._cdata,
       }));
 
       if (Array.isArray(parsedData)) {
