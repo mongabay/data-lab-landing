@@ -1,31 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: 'export',
   webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: [
-        {
-          loader: "svg-sprite-loader",
-        },
-        {
-          loader: "svgo-loader",
-          options: {
-            plugins: [
-              {
-                name: "preset-default",
-                params: {
-                  overrides: {
-                    convertColors: { shorthex: false },
-                    convertPathData: false,
-                  },
-                },
-              },
-            ],
-          },
-        },
-      ],
-    });
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));
+
+    config.module.rules.push(
+      // Reapply the existing rule, but only for svg imports ending in ?url
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/, // *.svg?url
+      },
+      // Convert all other *.svg imports to React components
+      {
+        test: /\.svg$/i,
+        issuer: fileLoaderRule.issuer,
+        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
+        use: ['@svgr/webpack'],
+      },
+    );
     return config;
   },
 };

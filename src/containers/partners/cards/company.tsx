@@ -1,8 +1,7 @@
-import Icon from '@/components/icon';
 import cx from 'classnames';
-import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg?sprite';
+import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg';
 import { Company } from '@/types/partner';
-import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 
 const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) => {
   return (
@@ -18,12 +17,12 @@ const Card = ({ name, image, imageWidth, imageHeight, link, style }: Company) =>
               style={{ ...style }}
             />
           ) : (
-            <Icon icon={PartnersPlaceholderIcon} className="h-9 w-9" />
+            <PartnersPlaceholderIcon className="h-9 w-9" />
           )}
         </div>
         <div className="mt-6 flex w-full items-center justify-between font-cardo text-base leading-tight sm:w-full sm:text-[28px]">
           {name}
-          <Icon icon={ArrowUpRightIcon} className="h-4 w-4 place-self-end sm:h-5 sm:w-5" />
+          <ArrowUpRightIcon className="h-4 w-4 place-self-end sm:h-5 sm:w-5" />
         </div>
       </div>
     </a>

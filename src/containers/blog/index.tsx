@@ -8,8 +8,7 @@ import Card from './card';
 import Button from '@/components/button';
 
 import { useData } from '@/utils';
-import Icon from '@/components/icon';
-import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 
 import { menuLinks } from '@/constants';
 
@@ -68,10 +67,7 @@ const Blog = () => {
             href="https://news.mongabay.com/list/mongabay-data-studio/"
           >
             Explore Data Stories{' '}
-            <Icon
-              className="ml-8 inline-block h-4 w-4 fill-primary stroke-primary"
-              icon={ArrowUpRightIcon}
-            />
+            <ArrowUpRightIcon className="ml-8 inline-block fill-primary stroke-primary" />
           </Button>
         </div>
       </div>

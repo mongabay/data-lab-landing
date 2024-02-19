@@ -8,7 +8,7 @@ declare module '*.glsl' {
   export default value;
 }
 
-declare module '*.svg?sprite' {
+declare module '*.svg' {
   const content: {
     id: string;
     viewBox: string;

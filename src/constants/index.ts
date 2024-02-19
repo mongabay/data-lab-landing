@@ -1,7 +1,7 @@
-import SatelliteIcon from '@/styles/icons/satellite.svg?sprite';
-import FireIcon from '@/styles/icons/fire.svg?sprite';
-import ReforestationIcon from '@/styles/icons/reforestation.svg?sprite';
-import SupplyIcon from '@/styles/icons/supply.svg?sprite';
+import SatelliteIcon from '@/styles/icons/satellite.svg';
+import FireIcon from '@/styles/icons/fire.svg';
+import ReforestationIcon from '@/styles/icons/reforestation.svg';
+import SupplyIcon from '@/styles/icons/supply.svg';
 
 export const COLORS = ['#03755E', '#184B95', '#A01200', '#7E56D8'];
 
