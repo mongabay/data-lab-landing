@@ -5,9 +5,8 @@ import {
   AccordionContent,
   AccordionItem,
 } from '@/components/accordion';
-import Icon from '@/components/icon';
 import { TOOLS } from '@/constants';
-import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 
 const accordionItems = [
   {
@@ -118,10 +117,7 @@ const Footer = () => {
                 href="https://news.mongabay.com/donate/"
               >
                 Donate
-                <Icon
-                  icon={ArrowUpRightIcon}
-                  className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
-                />
+                <ArrowUpRightIcon className="ml-8 inline fill-primary stroke-primary" />
               </Button>
             </div>
           </div>
@@ -179,11 +175,7 @@ const Footer = () => {
               href="https://www.mongabay.com/contact/"
               className="bg-white text-emerald-700 transition-colors duration-300 hover:bg-[#E6F1EF]"
             >
-              Get in Touch{' '}
-              <Icon
-                icon={ArrowUpRightIcon}
-                className="ml-8 inline h-4 w-4 fill-primary stroke-primary"
-              />
+              Get in Touch <ArrowUpRightIcon className="ml-8 inline fill-primary stroke-primary" />
             </Button>
           </div>
         </div>

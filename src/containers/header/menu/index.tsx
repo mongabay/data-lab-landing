@@ -4,12 +4,12 @@ import { TOOLS } from '@/constants';
 import Icon from '@/components/icon';
 
 import MenuIcon from '@/styles/icons/menu.svg';
-import XIcon from '@/styles/icons/x.svg';
+import XIcon from '@/styles/icons/x-large.svg';
 import { useState } from 'react';
 import cx from 'classnames';
 import Button from '@/components/button';
 
-import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 
 const HeaderMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const HeaderMenu = () => {
     <div className="text-dark-gray">
       <button onClick={() => setIsOpen(true)}>
         <span className="sr-only">open navigation menu</span>
-        <Icon icon={MenuIcon} className="h-4 stroke-white sm:stroke-secondary" />
+        <MenuIcon className=" stroke-white sm:stroke-secondary" />
       </button>
       <div
         className={cx('fixed left-0 top-0 transition-all', {
@@ -34,13 +34,13 @@ const HeaderMenu = () => {
         })}
         {...(!isOpen && { inert: '' })}
       >
-        <div className="flex h-full w-screen flex-col items-start gap-[60px] overflow-y-auto px-5 pb-14 pt-8 sm:w-auto sm:px-[88px] lg:min-w-[510px]">
+        <div className="flex h-full w-screen flex-col items-start gap-[60px] overflow-y-auto px-5 pb-14 pt-12 sm:w-auto sm:px-[88px] lg:min-w-[510px]">
           <button
             className="self-end rounded-full pr-4 focus-visible:outline-offset-4 focus-visible:outline-primary sm:pr-0"
             onClick={() => setIsOpen(false)}
           >
             <span className="sr-only">close navigation menu</span>
-            <Icon icon={XIcon} className="h-[18px] w-[18px] fill-dark-gray" />
+            <XIcon className="fill-dark-gray" />
           </button>
           <p className="font-open text-5xl font-light leading-[56px]">Mongabay Data Studio</p>
           <ul className="space-y-6">
@@ -71,10 +71,7 @@ const HeaderMenu = () => {
               className="border border-dark-gray bg-dark-gray text-white hover:bg-black/80"
             >
               Get in touch{' '}
-              <Icon
-                icon={ArrowUpRightIcon}
-                className="ml-8 inline h-4 w-4 fill-white stroke-white"
-              />
+              <ArrowUpRightIcon className="ml-8 inline-block fill-white stroke-white" />
             </Button>
           </div>
         </div>
