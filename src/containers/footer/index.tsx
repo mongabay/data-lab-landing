@@ -209,7 +209,7 @@ const Footer = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="text-black hover:underline"
                     href={url}
                   >
                     {name}
@@ -231,7 +231,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/mongabay/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="text-black hover:underline"
                 >
                   LinkedIn
                 </a>
@@ -241,7 +241,7 @@ const Footer = () => {
                   href="https://www.youtube.com/@MongabayTV/featured"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="text-black hover:underline"
                 >
                   Youtube
                 </a>
@@ -251,7 +251,7 @@ const Footer = () => {
                   href="https://www.twitter.com/mongabay"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="text-black hover:underline"
                 >
                   X
                 </a>
@@ -261,7 +261,7 @@ const Footer = () => {
                   href="https://www.facebook.com/mongabay"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="text-black hover:underline"
                 >
                   Facebook
                 </a>
