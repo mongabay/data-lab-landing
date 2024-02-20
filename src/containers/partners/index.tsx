@@ -31,7 +31,7 @@ const Partners = () => {
           id={menuLinks[2].link.replace('#', '')}
           className="container font-open text-[32px] font-light text-white sm:text-[56px] sm:leading-[72px]"
         >
-          <h2>People and Partner Companies</h2>
+          <h2>People and Partners</h2>
         </div>
       </div>
       <div className="container py-20 sm:py-[127px]">
@@ -45,7 +45,7 @@ const Partners = () => {
 
         <div className="mt-12 sm:mt-32">
           <div className="mb-5">
-            <h3 className="text-sm font-semibold">Companies</h3>
+            <h3 className="text-sm font-semibold">Partners</h3>
           </div>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
             {COMPANIES.map((p) => (

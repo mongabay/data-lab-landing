@@ -1,6 +1,5 @@
-import Icon from '@/components/icon';
 import Modal from '@/components/modal';
-import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg?sprite';
+import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg';
 import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 import { Partner } from '@/types/partner';
 import Button from '@/components/button';
@@ -16,10 +15,10 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
       title={details?.name}
       open={!!details}
       onOpenChange={close}
-      className="bg-dark-gray text-white"
+      className="z-50 bg-black text-white"
       size="full"
     >
-      <div className="flex min-h-full flex-col items-center gap-x-20 gap-y-6 sm:flex-row sm:items-start sm:justify-center">
+      <div className="flex h-full flex-col items-center gap-x-20 gap-y-6 sm:flex-row sm:items-center sm:justify-center">
         <div className="flex shrink-0 items-center justify-center">
           {details?.image ? (
             <img
@@ -30,7 +29,7 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
               className="aspect-square w-1/2 max-w-[220px] rounded-full object-cover sm:w-full"
             />
           ) : (
-            <Icon icon={PartnersPlaceholderIcon} className="h-14 w-14" />
+            <PartnersPlaceholderIcon className="h-14 w-14" />
           )}
         </div>
         <div className="max-w-[400px] space-y-8 font-open text-white">
@@ -53,10 +52,10 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
             href={details?.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex cursor-pointer items-center gap-x-4 !p-0"
+            className="inline-flex cursor-pointer items-center gap-x-4 !p-0 text-white"
           >
             See profile
-            <Icon icon={ArrowUpRightIcon} className="h-5 w-5 fill-white stroke-white" />
+            <ArrowUpRightIcon className="fill-white stroke-white" />
           </Button>
         </div>
       </div>

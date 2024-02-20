@@ -1,8 +1,7 @@
 import Button from '@/components/button';
-import Icon from '@/components/icon';
 import { useMemo } from 'react';
 
-import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 import { Article } from '@/types/article';
 import classNames from 'classnames';
 
@@ -26,7 +25,7 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
       <div className="flex items-center justify-center overflow-hidden rounded-[32px]">
         <div
           className={classNames(
-            'aspect-video min-h-[215px] w-full object-cover',
+            'aspect-video min-h-full w-full max-w-full object-cover',
             index === 0 ? 'md:min-h-[350px]' : 'md:min-h-[195px]',
           )}
           style={{
@@ -43,10 +42,7 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
         >
           <>
             Go to article
-            <Icon
-              className="ml-3 inline-block h-3 w-3  fill-primary stroke-primary"
-              icon={ArrowUpRightIcon}
-            />
+            <ArrowUpRightIcon className="ml-3 inline-block h-3 w-3  fill-primary stroke-primary" />
           </>
         </Button>
       </div>
@@ -63,16 +59,6 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
         {'  '}
         <span className="font-bold uppercase leading-none">{author}</span>
       </p>
-      {/* <Button
-        target="_blank"
-        className="block bg-white pl-0 font-semibold text-dark-gray underline transition-all duration-300 sm:hidden"
-        href={url}
-      >
-        <>
-          Go to article
-          <Icon className="ml-3 inline-block h-2.5 w-2.5" icon={ArrowUpRightIcon} />
-        </>
-      </Button> */}
     </div>
   );
 };

@@ -5,7 +5,6 @@ import * as Accordion from '@radix-ui/react-accordion';
 
 import ChevronDownIcon from '@/styles/icons/chevron-down.svg';
 import { FC, PropsWithChildren } from 'react';
-import Icon from '../icon';
 import classNames from 'classnames';
 
 const AccordionRoot = Accordion.Root;
@@ -23,9 +22,8 @@ const AccordionHeader: FC<PropsWithChildren<AccordionHeaderProps>> = ({ children
     <Accordion.Header>
       <Accordion.Trigger className={classNames('group block', className)}>
         {children}
-        <Icon
-          icon={ChevronDownIcon}
-          className="inline h-[30px] w-[30px] flex-shrink-0 stroke-primary group-data-[state='open']:rotate-180 sm:h-12 sm:w-12"
+        <ChevronDownIcon
+          className="inline flex-shrink-0 scale-75 stroke-primary group-data-[state='open']:rotate-180 sm:scale-100 "
           aria-hidden
         />
       </Accordion.Trigger>

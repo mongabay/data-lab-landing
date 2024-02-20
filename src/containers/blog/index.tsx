@@ -8,8 +8,7 @@ import Card from './card';
 import Button from '@/components/button';
 
 import { useData } from '@/utils';
-import Icon from '@/components/icon';
-import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg?sprite';
+import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
 
 import { menuLinks } from '@/constants';
 
@@ -57,7 +56,7 @@ const Blog = () => {
             ))}
           </div>
         </div>
-        <div className="container mt-20 flex justify-center">
+        <div className="mt-20 flex justify-center">
           <Button
             className={cx(
               'bg-white text-primary transition-colors duration-300 hover:bg-[#E6F1EF]',
@@ -65,13 +64,10 @@ const Blog = () => {
                 '-translate-y-20 border border-white sm:-translate-y-40': !!error,
               },
             )}
-            href="https://www.mongabay.com/list/data-lab/"
+            href="https://news.mongabay.com/list/mongabay-data-studio/"
           >
             Explore Data Stories{' '}
-            <Icon
-              className="ml-8 inline-block h-4 w-4 fill-primary stroke-primary"
-              icon={ArrowUpRightIcon}
-            />
+            <ArrowUpRightIcon className="ml-8 inline-block fill-primary stroke-primary" />
           </Button>
         </div>
       </div>

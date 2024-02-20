@@ -19,13 +19,5 @@
     "image": "/images/wri-logo.png",
     "imageWidth": 241,
     "imageHeight": 88
-  },
-  {
-    "name": "Mongabay",
-    "link": "https://mongabay.org/",
-    "image": "/images/mongabay-logo.png",
-    "imageWidth": 283,
-    "imageHeight": 42,
-    "style": { "filter": "invert(1)" }
   }
 ]

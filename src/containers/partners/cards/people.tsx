@@ -1,6 +1,5 @@
-import Icon from '@/components/icon';
 import cx from 'classnames';
-import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg?sprite';
+import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg';
 import { Partner } from '@/types/partner';
 
 const PartnerCard = ({ name, image, role, company }: Partner) => {
@@ -21,14 +20,14 @@ const PartnerCard = ({ name, image, role, company }: Partner) => {
             alt={name}
           />
         ) : (
-          <Icon icon={PartnersPlaceholderIcon} className="h-9 w-9" />
+          <PartnersPlaceholderIcon className="h-9 w-9" />
         )}
       </div>
       <div className="pt-6">
-        <div className="cursor-pointer font-cardo text-base capitalize leading-tight sm:mb-4 sm:text-[28px]">
+        <div className="font-cardo text-base font-normal capitalize leading-tight sm:mb-4 sm:text-[28px]">
           {name.toLowerCase()}
         </div>
-        <p className="hidden space-x-3 text-base sm:block">
+        <p className="hidden space-x-3 font-open text-base font-normal sm:block">
           <span>{role}</span>
           <span className="text-xl leading-none">&#x2022;</span>
           <span className="underline">{company}</span>

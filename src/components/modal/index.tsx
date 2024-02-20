@@ -1,6 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import Icon from '../icon';
-import XIcon from '@/styles/icons/x.svg?sprite';
+import XIcon from '@/styles/icons/x.svg';
 import cx from 'classnames';
 
 type ModalProps = {
@@ -32,10 +31,10 @@ const Modal = ({
         <Dialog.Content className="container !pointer-events-auto relative h-full overflow-y-auto py-14 focus-visible:outline-none">
           <Dialog.Close asChild>
             <button
-              className="absolute right-9 top-9 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
+              className="fixed right-10 top-10 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
               aria-label="Close"
             >
-              <Icon className="h-5 w-5 fill-dark-gray" icon={XIcon} />
+              <XIcon className=" fill-dark-gray" />
             </button>
           </Dialog.Close>
           {children}
