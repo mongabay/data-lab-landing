@@ -23,7 +23,7 @@ export const useData = () => {
               ?._attributes.url
           : item.enclosure?._attributes?.url,
         url: item.link._text,
-        author: item.creator?._cdata,
+        author: item['dc:creator']?._cdata,
       }));
 
       if (Array.isArray(parsedData)) {

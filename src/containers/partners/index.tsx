@@ -47,7 +47,7 @@ const Partners = () => {
           <div className="mb-5">
             <h3 className="text-sm font-semibold">Partners</h3>
           </div>
-          <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
             {COMPANIES.map((p) => (
               <div key={p.name}>
                 <CompanyCard {...p} />
@@ -60,9 +60,9 @@ const Partners = () => {
           <div className="mb-5">
             <h3 className="text-sm font-semibold">People</h3>
           </div>
-          <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
             {peopleData.map((p) => (
-              <Button key={p.name} className="!p-0" onClick={() => setDetails(p)}>
+              <Button key={p.name} className="!w-full !p-0" onClick={() => setDetails(p)}>
                 <PeopleCard {...p} />
               </Button>
             ))}
