@@ -1,0 +1,24 @@
+# Weekly dependency updates, grouped so minor/patch bumps arrive as one PR per ecosystem.
+# PRs target the default branch (develop).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: ["dependencies"]
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    labels: ["dependencies", "ci"]
+    groups:
+      actions:
+        patterns: ["*"]
