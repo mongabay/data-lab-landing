@@ -32,9 +32,7 @@ const HeaderMenu = () => {
           'translate-x-0': isOpen,
           'translate-x-full': !isOpen,
         })}
-        // @types/react 18.3 types `inert` as boolean (React 19), but React 18 drops boolean
-        // unknown attributes at runtime, so keep the empty string. Remove cast with React 19.
-        {...(!isOpen && ({ inert: '' } as unknown as { inert: boolean }))}
+        inert={!isOpen}
       >
         <div className="flex h-full w-screen flex-col items-start gap-[60px] overflow-y-auto px-5 pt-12 pb-14 sm:w-auto sm:px-[88px] lg:min-w-[510px]">
           <button
