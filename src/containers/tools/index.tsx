@@ -19,7 +19,7 @@ const Tools = () => {
       </div>
       <div className="container space-y-20 py-20 text-dark-gray sm:space-y-40 sm:py-[127px]">
         <div>
-          <p className="max-w-[680px] font-open text-2xl font-light  text-black sm:text-[32px] sm:leading-[44px]">
+          <p className="max-w-[680px] font-open text-2xl font-light text-black sm:text-[32px] sm:leading-[44px]">
             Mongabay is developing a suite of accessible visualization tools designed to empower
             journalists to create stories backed by accurate data sources.
           </p>
@@ -54,7 +54,7 @@ const Tools = () => {
                     'order-2 sm:order-1': index % 2 === 0,
                   })}
                 >
-                  <h3 className="font-open text-3xl  font-light text-black sm:text-[44px] sm:leading-[48px]">
+                  <h3 className="font-open text-3xl font-light text-black sm:text-[44px] sm:leading-[48px]">
                     {name}
                   </h3>
                   <p className="font-cardo text-base font-normal text-black sm:text-[28px] sm:leading-9">

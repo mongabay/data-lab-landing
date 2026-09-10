@@ -18,12 +18,12 @@ const HeaderMenu = () => {
     <div className="text-dark-gray">
       <button onClick={() => setIsOpen(true)}>
         <span className="sr-only">open navigation menu</span>
-        <MenuIcon className=" stroke-white sm:stroke-secondary" />
+        <MenuIcon className="stroke-white sm:stroke-secondary" />
       </button>
       <div
         className={cx('fixed left-0 top-0 transition-all', {
           'z-20 h-full w-full bg-black opacity-40 blur-lg duration-500': isOpen,
-          '-z-10 opacity-0 ': !isOpen,
+          '-z-10 opacity-0': !isOpen,
         })}
         onClick={() => setIsOpen(false)}
       ></div>

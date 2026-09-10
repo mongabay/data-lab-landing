@@ -9,6 +9,12 @@ updates:
       day: monday
     open-pull-requests-limit: 5
     labels: ["dependencies"]
+    # The 3D stack (fiber, drei, three) is upgraded together; single bumps break the build.
+    ignore:
+      - dependency-name: "three"
+      - dependency-name: "@types/three"
+      - dependency-name: "@react-three/fiber"
+      - dependency-name: "@react-three/drei"
     groups:
       minor-and-patch:
         update-types: ["minor", "patch"]

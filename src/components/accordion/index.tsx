@@ -23,7 +23,7 @@ const AccordionHeader: FC<PropsWithChildren<AccordionHeaderProps>> = ({ children
       <Accordion.Trigger className={classNames('group block', className)}>
         {children}
         <ChevronDownIcon
-          className="inline flex-shrink-0 scale-75 stroke-primary group-data-[state='open']:rotate-180 sm:scale-100 "
+          className="inline flex-shrink-0 scale-75 stroke-primary group-data-[state='open']:rotate-180 sm:scale-100"
           aria-hidden
         />
       </Accordion.Trigger>
