@@ -9,8 +9,7 @@ updates:
       day: monday
     open-pull-requests-limit: 5
     labels: ["dependencies"]
-    # The 3D stack moves together (React 19 -> fiber 9 -> drei 10 -> three >= 0.159),
-    # tracked in MP-292. Until then any single bump breaks the build.
+    # The 3D stack (fiber, drei, three) is upgraded together; single bumps break the build.
     ignore:
       - dependency-name: "three"
       - dependency-name: "@types/three"
