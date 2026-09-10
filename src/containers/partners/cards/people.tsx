@@ -4,7 +4,7 @@ import { Partner } from '@/types/partner';
 
 const PartnerCard = ({ name, image, role, company }: Partner) => {
   return (
-    <div className="flex aspect-square  h-full w-full max-w-[350px] flex-col items-center justify-center overflow-hidden  rounded-[32px] border border-black p-3 font-open text-base text-dark-gray duration-700 animate-in fade-in sm:justify-between sm:p-6">
+    <div className="flex aspect-square h-full w-full max-w-[350px] flex-col items-center justify-center overflow-hidden rounded-[32px] border border-black p-3 font-open text-base text-dark-gray duration-700 animate-in fade-in sm:justify-between sm:p-6">
       <div
         className={cx(
           'transition-color flex w-full items-center justify-center duration-300',

@@ -42,7 +42,7 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
         >
           <>
             Go to article
-            <ArrowUpRightIcon className="ml-3 inline-block h-3 w-3  fill-primary stroke-primary" />
+            <ArrowUpRightIcon className="ml-3 inline-block h-3 w-3 fill-primary stroke-primary" />
           </>
         </Button>
       </div>

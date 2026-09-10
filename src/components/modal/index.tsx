@@ -34,7 +34,7 @@ const Modal = ({
               className="fixed right-10 top-10 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
               aria-label="Close"
             >
-              <XIcon className=" fill-dark-gray" />
+              <XIcon className="fill-dark-gray" />
             </button>
           </Dialog.Close>
           {children}

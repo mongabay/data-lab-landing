@@ -197,13 +197,13 @@ const Footer = () => {
         </div>
         <div className="mx-auto flex w-full flex-row gap-x-5 gap-y-6 py-11 sm:gap-y-0 lg:gap-x-10">
           <div className="flex-1 space-y-4">
-            <div className="flex items-center gap-1  text-sm sm:text-base">
+            <div className="flex items-center gap-1 text-sm sm:text-base">
               <p className="flex-0 flex-shrink-0 font-semibold leading-normal text-black">
                 Data Tools
               </p>
               <div className="h-px flex-1 border-b border-black/10"></div>
             </div>
-            <ul className="space-y-2  text-sm sm:text-base">
+            <ul className="space-y-2 text-sm sm:text-base">
               {TOOLS.map(({ name, url }) => (
                 <li key={name}>
                   <a
@@ -220,7 +220,7 @@ const Footer = () => {
           </div>
           <div className="flex-1 space-y-4">
             <div className="flex items-center gap-1">
-              <p className=" flex-0 flex-shrink-0 text-sm font-semibold leading-normal text-black sm:text-base">
+              <p className="flex-0 flex-shrink-0 text-sm font-semibold leading-normal text-black sm:text-base">
                 Social Media
               </p>
               <div className="h-px flex-1 border-b border-black/10"></div>
