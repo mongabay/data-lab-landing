@@ -58,11 +58,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Non-blocking until the Next.js upgrade (MP-289) and vulnerability sweep (MP-290)
-      # clear the known advisories. Then remove continue-on-error.
+      # Blocking: a high/critical advisory in a production dependency stops the deploy.
       - name: Audit production dependencies
         run: pnpm audit --prod --audit-level=high
-        continue-on-error: true
 
       # next.config.js sets output: 'export', so `next build` writes ./out directly.
       - name: Build with Next.js
