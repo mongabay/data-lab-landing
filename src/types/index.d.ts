@@ -1,7 +1,5 @@
-declare module 'glslify' {
-  const glslify: (shader: string) => string;
-  export default glslify;
-}
+// Side-effect stylesheet imports (TypeScript 6 checks them: noUncheckedSideEffectImports)
+declare module '*.css';
 
 declare module '*.glsl' {
   const value: string;
