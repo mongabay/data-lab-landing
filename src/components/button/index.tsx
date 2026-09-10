@@ -21,7 +21,8 @@ const Button = ({ children, className, ...props }: ButtonProps | AnchorProps) =>
 
   if (aProps.href) {
     return (
-      <a href={aProps.href} className={c} target="_blank" rel="noopener noreferrer" {...aProps}>
+      // Spread first so callers cannot override target/rel: external links always get noopener noreferrer
+      <a className={c} {...aProps} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
