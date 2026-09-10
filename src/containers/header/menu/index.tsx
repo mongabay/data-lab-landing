@@ -21,14 +21,14 @@ const HeaderMenu = () => {
         <MenuIcon className="stroke-white sm:stroke-secondary" />
       </button>
       <div
-        className={cx('fixed left-0 top-0 transition-all', {
+        className={cx('fixed top-0 left-0 transition-all', {
           'z-20 h-full w-full bg-black opacity-40 blur-lg duration-500': isOpen,
           '-z-10 opacity-0': !isOpen,
         })}
         onClick={() => setIsOpen(false)}
       ></div>
       <div
-        className={cx('fixed right-0 top-0 z-20 h-full bg-white transition-all duration-300', {
+        className={cx('fixed top-0 right-0 z-20 h-full bg-white transition-all duration-300', {
           'translate-x-0': isOpen,
           'translate-x-full': !isOpen,
         })}
@@ -36,7 +36,7 @@ const HeaderMenu = () => {
         // unknown attributes at runtime, so keep the empty string. Remove cast with React 19.
         {...(!isOpen && ({ inert: '' } as unknown as { inert: boolean }))}
       >
-        <div className="flex h-full w-screen flex-col items-start gap-[60px] overflow-y-auto px-5 pb-14 pt-12 sm:w-auto sm:px-[88px] lg:min-w-[510px]">
+        <div className="flex h-full w-screen flex-col items-start gap-[60px] overflow-y-auto px-5 pt-12 pb-14 sm:w-auto sm:px-[88px] lg:min-w-[510px]">
           <button
             className="self-end rounded-full pr-4 focus-visible:outline-offset-4 focus-visible:outline-primary sm:pr-0"
             onClick={() => setIsOpen(false)}
@@ -44,7 +44,7 @@ const HeaderMenu = () => {
             <span className="sr-only">close navigation menu</span>
             <XIcon className="fill-dark-gray" />
           </button>
-          <p className="font-open text-5xl font-light leading-[56px]">Mongabay Data Studio</p>
+          <p className="font-open text-5xl leading-[56px] font-light">Mongabay Data Studio</p>
           <ul className="space-y-6">
             {TOOLS.map(({ name, url, icon, color }) => (
               <li key={name}>

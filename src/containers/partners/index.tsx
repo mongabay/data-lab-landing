@@ -62,7 +62,7 @@ const Partners = () => {
           </div>
           <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
             {peopleData.map((p) => (
-              <Button key={p.name} className="!w-full !p-0" onClick={() => setDetails(p)}>
+              <Button key={p.name} className="w-full! p-0!" onClick={() => setDetails(p)}>
                 <PeopleCard {...p} />
               </Button>
             ))}

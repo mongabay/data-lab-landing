@@ -37,7 +37,7 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
           }}
         ></div>
         <Button
-          className="absolute hidden bg-white text-primary opacity-0 transition-all duration-300 focus-within:opacity-100 group-hover:opacity-100 sm:block"
+          className="absolute hidden bg-white text-primary opacity-0 transition-all duration-300 group-hover:opacity-100 focus-within:opacity-100 sm:block"
           href={url}
         >
           <>
@@ -54,10 +54,10 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
       >
         {title}
       </a>
-      <p className="font-open text-xs font-normal uppercase text-white sm:leading-[14.40px]">
+      <p className="font-open text-xs font-normal text-white uppercase sm:leading-[14.40px]">
         {dateText} <span className="ml-3">BY</span>
         {'  '}
-        <span className="font-bold uppercase leading-none">{author}</span>
+        <span className="leading-none font-bold uppercase">{author}</span>
       </p>
     </div>
   );
