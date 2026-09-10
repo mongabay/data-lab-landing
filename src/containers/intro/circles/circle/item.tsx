@@ -2,16 +2,16 @@
 
 import { useEffect, useMemo, useRef } from 'react';
 
-import { extend, ReactThreeFiber, useFrame } from '@react-three/fiber';
+import { extend, type ThreeElement, useFrame } from '@react-three/fiber';
 import { Color } from 'three';
 
 import CircleMaterial, { CircleMaterialProps } from './material';
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      circleMaterial: ReactThreeFiber.Object3DNode<CircleMaterialProps, typeof CircleMaterial>;
-    }
+// R3F 9: custom elements are declared on ThreeElements instead of the global JSX namespace
+declare module '@react-three/fiber' {
+  interface ThreeElements {
+    circleMaterial: Omit<ThreeElement<typeof CircleMaterial>, keyof CircleMaterialProps> &
+      Partial<CircleMaterialProps>;
   }
 }
 extend({ CircleMaterial });
