@@ -1,6 +1,84 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+
+/* v3 container config (center, padding, custom screens) expressed as a v4 utility */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 600px) {
+    max-width: 600px;
+    padding-inline: 2rem;
+  }
+  @media (width >= 750px) {
+    max-width: 750px;
+  }
+  @media (width >= 1000px) {
+    max-width: 1000px;
+    padding-inline: 0;
+  }
+  @media (width >= 1062px) {
+    max-width: 1062px;
+  }
+}
+
+@theme {
+  --color-dark-gray: #222;
+  --color-medium-gray: #7e7e7e;
+  --color-light-gray: #d8d8d8;
+  --color-primary: #0f362e;
+  --color-secondary: #07f5c5;
+  --color-earth-atlas: var(--earth-atlas);
+  --color-fire-weather: var(--fire-weather);
+  --color-reforestation-app: var(--reforestation-app);
+  --color-trade-flow: var(--trade-flow);
+  --color-earth-atlas-dark: var(--earth-atlas-dark);
+  --color-fire-weather-dark: var(--fire-weather-dark);
+  --color-reforestation-app-dark: var(--reforestation-app-dark);
+  --color-trade-flow-dark: var(--trade-flow-dark);
+
+  --font-open: var(--font-open);
+  --font-cardo: var(--font-cardo);
+
+  --text-3_5xl: 32px;
+  --text-3_5xl--line-height: 48px;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+  --background-image-intro-bg: url(/images/intro-bg.png);
+  --background-image-blog-bg: url(/images/sections-bg.png);
+  --background-image-green-gradient: radial-gradient(
+    50% 70% at 0% 100%,
+    rgba(13, 85, 71, 1),
+    rgba(var(--primary-rgb), 1)
+  );
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* Tailwind v4 preflight sets buttons to cursor: default; keep the v3 pointer. */
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

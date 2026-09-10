@@ -52,7 +52,7 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
             href={details?.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex cursor-pointer items-center gap-x-4 !p-0 text-white"
+            className="inline-flex cursor-pointer items-center gap-x-4 p-0! text-white"
           >
             See profile
             <ArrowUpRightIcon className="fill-white stroke-white" />

@@ -24,14 +24,14 @@ const Modal = ({
       <Dialog.Overlay className="DialogOverlay" />
       <Dialog.Content
         className={cx('transition-opacity duration-300', className, {
-          'fixed left-0 top-0 flex h-screen w-screen flex-col': size === 'full',
+          'fixed top-0 left-0 flex h-screen w-screen flex-col': size === 'full',
         })}
       >
         <Dialog.Title className="DialogTitle sr-only">{title}</Dialog.Title>
-        <Dialog.Content className="container !pointer-events-auto relative h-full overflow-y-auto py-14 focus-visible:outline-none">
+        <Dialog.Content className="pointer-events-auto! relative container h-full overflow-y-auto py-14 focus-visible:outline-hidden">
           <Dialog.Close asChild>
             <button
-              className="fixed right-10 top-10 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
+              className="fixed top-10 right-10 flex h-8 w-8 items-center justify-center rounded-full bg-white hover:opacity-70"
               aria-label="Close"
             >
               <XIcon className="fill-dark-gray" />

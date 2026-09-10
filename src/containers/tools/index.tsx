@@ -12,7 +12,7 @@ const Tools = () => {
       <div className="sticky top-0 z-20 flex w-full flex-col items-start justify-center gap-[60px] bg-black py-5">
         <div
           id={menuLinks[0].link.replace('#', '')}
-          className="container font-open text-[32px] font-light leading-[32px] text-white sm:text-[56px] sm:leading-[72px]"
+          className="container font-open text-[32px] leading-[32px] font-light text-white sm:text-[56px] sm:leading-[72px]"
         >
           <h2>Data Tools</h2>
         </div>
@@ -60,7 +60,7 @@ const Tools = () => {
                   <p className="font-cardo text-base font-normal text-black sm:text-[28px] sm:leading-9">
                     {subtitle}
                   </p>
-                  <p className="max-w-[391px] font-open text-sm font-normal leading-normal text-black sm:text-base">
+                  <p className="max-w-[391px] font-open text-sm leading-normal font-normal text-black sm:text-base">
                     {description}
                   </p>
                   <Button
@@ -72,7 +72,7 @@ const Tools = () => {
                   >
                     {buttonText}
                   </Button>
-                  <p className="!mt-8 font-open text-sm font-normal leading-relaxed text-neutral-800 text-opacity-60 sm:!mt-14 sm:text-base">
+                  <p className="mt-8! font-open text-sm leading-relaxed font-normal text-neutral-800/60 sm:mt-14! sm:text-base">
                     Built with{' '}
                     {partners.map(({ name, image, width, height, invert }) => (
                       <img

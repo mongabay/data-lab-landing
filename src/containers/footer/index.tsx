@@ -102,11 +102,11 @@ const Footer = () => {
           <div className="inline-flex w-full flex-col items-center justify-start gap-10 py-20">
             <div className="flex flex-col justify-center gap-6 sm:items-center">
               <div className="sm:text-center">
-                <span className="font-open text-[32px] font-light leading-10 text-secondary sm:text-6xl">
+                <span className="font-open text-[32px] leading-10 font-light text-secondary sm:text-6xl">
                   We are nonprofit.
                 </span>
               </div>
-              <div className="max-w-96 font-open text-base font-normal leading-snug text-secondary sm:text-center">
+              <div className="max-w-96 font-open text-base leading-snug font-normal text-secondary sm:text-center">
                 Help us tell stories of biodiversity loss, climate change & socio-environmental
                 injustice.
               </div>
@@ -150,7 +150,7 @@ const Footer = () => {
                       {title}
                     </span>
                   </AccordionHeader>
-                  <AccordionContent className="AccordionContent font-open text-base font-normal leading-normal data-[state='open']:slide-in-from-top-4">
+                  <AccordionContent className="AccordionContent font-open text-base leading-normal font-normal data-[state='open']:slide-in-from-top-4">
                     {content}
                   </AccordionContent>
                 </AccordionItem>
@@ -198,9 +198,7 @@ const Footer = () => {
         <div className="mx-auto flex w-full flex-row gap-x-5 gap-y-6 py-11 sm:gap-y-0 lg:gap-x-10">
           <div className="flex-1 space-y-4">
             <div className="flex items-center gap-1 text-sm sm:text-base">
-              <p className="flex-0 flex-shrink-0 font-semibold leading-normal text-black">
-                Data Tools
-              </p>
+              <p className="flex-0 shrink-0 leading-normal font-semibold text-black">Data Tools</p>
               <div className="h-px flex-1 border-b border-black/10"></div>
             </div>
             <ul className="space-y-2 text-sm sm:text-base">
@@ -220,7 +218,7 @@ const Footer = () => {
           </div>
           <div className="flex-1 space-y-4">
             <div className="flex items-center gap-1">
-              <p className="flex-0 flex-shrink-0 text-sm font-semibold leading-normal text-black sm:text-base">
+              <p className="flex-0 shrink-0 text-sm leading-normal font-semibold text-black sm:text-base">
                 Social Media
               </p>
               <div className="h-px flex-1 border-b border-black/10"></div>
@@ -270,7 +268,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mb-4 h-px flex-1 border-b border-black/10"></div>
-        <div className="text-right text-sm font-normal leading-normal text-black/60">
+        <div className="text-right text-sm leading-normal font-normal text-black/60">
           <p>© 2023 Copyright Conservation news</p>
         </div>
       </div>

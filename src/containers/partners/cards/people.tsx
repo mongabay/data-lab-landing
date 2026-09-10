@@ -24,7 +24,7 @@ const PartnerCard = ({ name, image, role, company }: Partner) => {
         )}
       </div>
       <div className="pt-6">
-        <div className="font-cardo text-base font-normal capitalize leading-tight md:text-[28px] lg:mb-4">
+        <div className="font-cardo text-base leading-tight font-normal capitalize md:text-[28px] lg:mb-4">
           {name.toLowerCase()}
         </div>
         <p className="hidden space-x-3 font-open text-base font-normal md:block">
