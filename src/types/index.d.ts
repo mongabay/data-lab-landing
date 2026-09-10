@@ -6,12 +6,15 @@ declare module '*.glsl' {
   export default value;
 }
 
+// *.svg imports are React components via @svgr/webpack (see next.config.js);
+// *.svg?url keeps the file URL.
 declare module '*.svg' {
-  const content: {
-    id: string;
-    viewBox: string;
-    content: string;
-    node: SVGSymbolElement;
-  };
-  export default content;
+  import type { FC, SVGProps } from 'react';
+  const ReactComponent: FC<SVGProps<SVGSVGElement>>;
+  export default ReactComponent;
+}
+
+declare module '*.svg?url' {
+  const src: string;
+  export default src;
 }
