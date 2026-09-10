@@ -3,7 +3,6 @@
 import { shaderMaterial } from '@react-three/drei';
 import { Color } from '@react-three/fiber';
 
-import glslify from 'glslify';
 import FRAGMENT from 'raw-loader!glslify-loader!./fragment.glsl';
 import VERTEX from 'raw-loader!glslify-loader!./vertex.glsl';
 
@@ -58,8 +57,8 @@ export const CircleMaterial = shaderMaterial(
     uVelocity: [0, 0],
     uPrevVelocity: [0, 0],
   },
-  glslify(VERTEX),
-  glslify(FRAGMENT),
+  VERTEX,
+  FRAGMENT,
 );
 
 export default CircleMaterial;
