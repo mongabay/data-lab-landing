@@ -1,11 +1,6 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import cx from 'classnames';
 
-const BUTTON_TYPE = {
-  PRIMARY: 'bg-primary',
-  SECONDARY: 'bg-secondary',
-};
-
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {};
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {};
 
