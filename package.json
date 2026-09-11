@@ -42,6 +42,6 @@
     "postcss": "^8",
     "raw-loader": "^4.0.2",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6"
+    "typescript": "^7"
   }
 }
