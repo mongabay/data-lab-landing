@@ -4,7 +4,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: ["develop"]
+    branches: ['develop']
   # Manual runs, e.g. when a pull_request run does not fire for a branch
   workflow_dispatch:
 

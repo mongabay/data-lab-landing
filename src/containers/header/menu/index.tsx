@@ -20,7 +20,9 @@ const HeaderMenu = () => {
         <span className="sr-only">open navigation menu</span>
         <MenuIcon className="stroke-white sm:stroke-secondary" />
       </button>
+      {/* Visual backdrop; pointer-only. Keyboard users close via the button inside the panel. */}
       <div
+        aria-hidden="true"
         className={cx('fixed top-0 left-0 transition-all', {
           'z-20 h-full w-full bg-black opacity-40 blur-lg duration-500': isOpen,
           '-z-10 opacity-0': !isOpen,

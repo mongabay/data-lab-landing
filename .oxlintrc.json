@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "react", "react-hooks", "nextjs", "jsx-a11y"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    // Mirrors the previous next/core-web-vitals baseline
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // Static export: plain <img> is intentional (see next.config.js output: 'export')
+    "nextjs/no-img-element": "off",
+    // React 17+ automatic runtime, no React import needed for JSX
+    "react/react-in-jsx-scope": "off",
+    // Intro circles read refs during render to seed shader uniforms (src/containers/intro/circles/circle/item.tsx).
+    // Kept as a warning until that component is reworked.
+    "react/refs": "warn"
+  },
+  "ignorePatterns": [".next", "out", "node_modules", "next-env.d.ts"]
+}

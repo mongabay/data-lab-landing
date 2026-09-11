@@ -8,17 +8,17 @@ updates:
       interval: weekly
       day: monday
     open-pull-requests-limit: 5
-    labels: ["dependencies"]
+    labels: ['dependencies']
     groups:
       minor-and-patch:
-        update-types: ["minor", "patch"]
+        update-types: ['minor', 'patch']
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
       day: monday
-    labels: ["dependencies", "ci"]
+    labels: ['dependencies', 'ci']
     groups:
       actions:
-        patterns: ["*"]
+        patterns: ['*']

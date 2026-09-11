@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { extend, type ThreeElement, useFrame } from '@react-three/fiber';
 import { Color } from 'three';
@@ -43,15 +43,8 @@ const Circle = ({ p, size, color, noise, step, opacity }: CirclesProps) => {
 
   const COLOR = new Color(color).convertLinearToSRGB();
 
-  const velocity = useMemo(() => {
-    const random1 = Math.random();
-    const random2 = Math.random();
-
-    if (!prevVelocity.current) {
-      prevVelocity.current = [random1, random2];
-    }
-    return [random1, random2];
-  }, []);
+  // Random per mount; lazy initializer keeps the impure call out of render
+  const [velocity] = useState(() => [Math.random(), Math.random()]);
 
   useFrame(() => {
     if (!materialRef.current) return;
