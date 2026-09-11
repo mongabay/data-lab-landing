@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import Modal from '@/components/modal';
 import PartnersPlaceholderIcon from '@/styles/icons/partners-placeholder.svg';
 import ArrowUpRightIcon from '@/styles/icons/arrow-up-right.svg';
@@ -47,7 +49,17 @@ const PartnersDetails = ({ details, close }: PartnersDetailsProps) => {
               </a>
             </p>
           </div>
-          {details?.description && <p dangerouslySetInnerHTML={{ __html: details.description }} />}
+          {/* people.json descriptions only use <br> for line breaks; render as text, no innerHTML */}
+          {details?.description && (
+            <p>
+              {details.description.split(/<br\s*\/?>/i).map((line, i, lines) => (
+                <Fragment key={i}>
+                  {line}
+                  {i < lines.length - 1 && <br />}
+                </Fragment>
+              ))}
+            </p>
+          )}
           <Button
             href={details?.link}
             target="_blank"

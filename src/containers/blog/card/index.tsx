@@ -23,19 +23,21 @@ const Card = ({ date, image, title, url, author, index }: CardProps) => {
   return (
     <div className="group space-y-4 font-open text-white">
       <div className="flex items-center justify-center overflow-hidden rounded-[32px]">
+        {/* Feed image as an <img> (not an inline CSS url()), stacked as: primary bg <- image (lighten) <- white 20% (overlay), all desaturated */}
         <div
           className={classNames(
-            'aspect-video min-h-full w-full max-w-full object-cover',
+            'relative aspect-video min-h-full w-full max-w-full bg-primary grayscale-[90%]',
             index === 0 ? 'md:min-h-[350px]' : 'md:min-h-[195px]',
           )}
-          style={{
-            background: `linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), url('${image}'), #0F362E 50%`,
-            filter: 'grayscale(90%)',
-            backgroundBlendMode: 'overlay, lighten, normal',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        ></div>
+        >
+          <img
+            src={image}
+            alt=""
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover object-center mix-blend-lighten"
+          />
+          <div aria-hidden className="absolute inset-0 bg-white/20 mix-blend-overlay" />
+        </div>
         <Button
           className="absolute hidden bg-white text-primary opacity-0 transition-all duration-300 group-hover:opacity-100 focus-within:opacity-100 sm:block"
           href={url}
