@@ -24,7 +24,7 @@ const Blog = () => {
 
   return (
     <div className="bg-blog-bg bg-cover bg-center">
-      <div className="sticky top-0 z-50 flex w-full flex-col items-start justify-center gap-[60px] bg-secondary py-5">
+      <div className="sticky top-0 z-20 flex w-full flex-col items-start justify-center gap-[60px] bg-secondary py-5">
         <div
           id={menuLinks[1].link.replace('#', '')}
           className="container font-open text-3xl font-light text-black sm:text-[56px] sm:leading-[72px]"
