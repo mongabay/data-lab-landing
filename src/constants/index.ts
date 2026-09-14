@@ -2,7 +2,7 @@ import SatelliteIcon from '@/styles/icons/satellite.svg';
 import FireIcon from '@/styles/icons/fire.svg';
 import ReforestationIcon from '@/styles/icons/reforestation.svg';
 import SupplyIcon from '@/styles/icons/supply.svg';
-// import EarthIndexIcon from "@/styles/icons/earth-index.svg";
+import EarthIndexIcon from '@/styles/icons/earth-index.svg';
 
 export const COLORS = ['#03755E', '#184B95', '#A01200', '#7E56D8', '#9c60ff'];
 
@@ -28,7 +28,7 @@ export const TOOLS = [
     ],
     buttonText: 'Explore Earth Index',
     url: 'https://www.earthgenome.org/earth-index',
-    icon: null,
+    icon: EarthIndexIcon,
   },
   {
     id: 'earth-atlas',
