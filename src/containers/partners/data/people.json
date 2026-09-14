@@ -124,5 +124,14 @@
     "name": "Pablo Urrutia",
     "role": "Project Manager",
     "company": "Vizzuality"
+  },
+  {
+    "companyLink": "https://www.earthgenome.org",
+    "link": "https://www.earthgenome.org/about",
+    "image": "/images/people/edward-boyda.jpg",
+    "name": "Edward Boyda",
+    "role": "Data Scientist",
+    "company": "Earth Genome",
+    "description": "Edward is a physicist, teacher, data scientist and satellite journalist. He works with the non-profit Earth Genome, where he runs satellite- and AI-driven investigations for environmental and human rights reporting.<br><br>Before joining Earth Genome, he was an Associate Professor of Physics at Saint Mary's College of California, with interests in particle physics and quantum computing."
   }
 ]
