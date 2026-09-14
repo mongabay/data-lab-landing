@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="inherit">
+  <!-- lens ring: center (9.5,9.5), outer r 8, inner r 7.14 -->
+  <path fill-rule="evenodd" d="M1.5 9.5A8 8 0 1 0 17.5 9.5A8 8 0 1 0 1.5 9.5ZM2.36 9.5A7.14 7.14 0 1 1 16.64 9.5A7.14 7.14 0 1 1 2.36 9.5Z" fill="inherit"/>
+  <!-- meridian ellipse -->
+  <path fill-rule="evenodd" d="M6 9.5A3.5 7.14 0 1 0 13 9.5A3.5 7.14 0 1 0 6 9.5ZM6.86 9.5A2.64 6.28 0 1 1 12.14 9.5A2.64 6.28 0 1 1 6.86 9.5Z" fill="inherit"/>
+  <!-- equator + tropics -->
+  <rect x="2.36" y="9.07" width="14.28" height="0.86" fill="inherit"/>
+  <rect x="3.59" y="5.07" width="11.82" height="0.86" fill="inherit"/>
+  <rect x="3.59" y="13.07" width="11.82" height="0.86" fill="inherit"/>
+  <!-- handle, 45deg -->
+  <path d="M15.55 14.77L21.09 20.31L20.31 21.09L14.77 15.55Z" fill="inherit"/>
+  <!-- found-location dot -->
+  <circle cx="14" cy="7.1" r="0.6" fill="inherit"/>
+</svg>

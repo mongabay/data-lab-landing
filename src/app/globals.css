@@ -35,6 +35,8 @@
   --color-fire-weather-dark: var(--fire-weather-dark);
   --color-reforestation-app-dark: var(--reforestation-app-dark);
   --color-trade-flow-dark: var(--trade-flow-dark);
+  --color-earth-index: var(--earth-index);
+  --color-earth-index-dark: var(--earth-index-dark);
 
   --font-open: var(--font-open);
   --font-cardo: var(--font-cardo);
@@ -99,6 +101,9 @@
 
   --trade-flow: #7e56d8;
   --trade-flow-dark: #4a22a5;
+
+  --earth-index: #9c60ff;
+  --earth-index-dark: #6a2fd6;
 }
 
 @media (prefers-color-scheme: light) {

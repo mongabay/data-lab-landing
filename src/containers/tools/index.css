@@ -25,3 +25,10 @@
 .trade-flow:hover {
   background-color: var(--trade-flow-dark);
 }
+
+.earth-index {
+  background-color: var(--earth-index);
+}
+.earth-index:hover {
+  background-color: var(--earth-index-dark);
+}
