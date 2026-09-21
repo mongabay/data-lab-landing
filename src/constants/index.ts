@@ -2,34 +2,34 @@ import SatelliteIcon from '@/styles/icons/satellite.svg';
 import FireIcon from '@/styles/icons/fire.svg';
 import ReforestationIcon from '@/styles/icons/reforestation.svg';
 import SupplyIcon from '@/styles/icons/supply.svg';
-import EarthIndexIcon from '@/styles/icons/earth-index.svg';
+// import EarthIndexIcon from '@/styles/icons/earth-index.svg';
 
 export const COLORS = ['#03755E', '#184B95', '#A01200', '#7E56D8', '#9c60ff'];
 
 export const TOOLS = [
-  {
-    id: 'earth-index',
-    name: 'Earth Index',
-    subtitle: 'A Visual Search Engine',
-    description:
-      'Find patterns in satellite images with global coverage. Choose an area to search for a type of place and train computer vision to find similar locations.',
-    color: COLORS[4],
-    image: '/images/tools/earth-index.webp',
-    imageWidth: 545,
-    imageHeight: 515,
-    partners: [
-      {
-        name: 'Earth Genome',
-        image: '/images/partners/earth-genome.png',
-        width: 170,
-        height: 34,
-        invert: false,
-      },
-    ],
-    buttonText: 'Explore Earth Index',
-    url: 'https://www.earthgenome.org/earth-index',
-    icon: EarthIndexIcon,
-  },
+  // {
+  //   id: 'earth-index',
+  //   name: 'Earth Index',
+  //   subtitle: 'A Visual Search Engine',
+  //   description:
+  //     'Find patterns in satellite images with global coverage. Choose an area to search for a type of place and train computer vision to find similar locations.',
+  //   color: COLORS[4],
+  //   image: '/images/tools/earth-index.webp',
+  //   imageWidth: 545,
+  //   imageHeight: 515,
+  //   partners: [
+  //     {
+  //       name: 'Earth Genome',
+  //       image: '/images/partners/earth-genome.png',
+  //       width: 170,
+  //       height: 34,
+  //       invert: false,
+  //     },
+  //   ],
+  //   buttonText: 'Explore Earth Index',
+  //   url: 'https://www.earthgenome.org/earth-index',
+  //   icon: EarthIndexIcon,
+  // },
   {
     id: 'earth-atlas',
     name: 'Earth Atlas',
