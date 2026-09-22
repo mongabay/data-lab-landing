@@ -18,10 +18,7 @@ const Partners = () => {
   const [maxPartners, setMaxPartners] = useState(INITIAL_MAX_PARTNERS);
   const [details, setDetails] = useState<Partner | null>(null);
 
-  const peopleData = useMemo(
-    () => PEOPLE.filter((p) => p.name !== 'Edward Boyda').slice(0, maxPartners),
-    [maxPartners],
-  );
+  const peopleData = useMemo(() => PEOPLE.slice(0, maxPartners), [maxPartners]);
 
   const handleLoadMore = () => {
     setMaxPartners(PEOPLE.length);
