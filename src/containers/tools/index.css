@@ -19,13 +19,6 @@
   background-color: var(--reforestation-app-dark);
 }
 
-.trade-flow {
-  background-color: var(--trade-flow);
-}
-.trade-flow:hover {
-  background-color: var(--trade-flow-dark);
-}
-
 .earth-index {
   background-color: var(--earth-index);
 }

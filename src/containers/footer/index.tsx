@@ -40,7 +40,7 @@ const accordionItems = [
             <li>
               Harnessing the growing capacity of{' '}
               <span className="font-bold">artificial intelligence</span> to detect and predict land
-              use change and volumes in trade of commodities like minerals, timber and palm oil.
+              use change.
             </li>
             <li>
               Tapping into <span className="font-bold">on-the-ground journalism</span> networks in
