@@ -16,7 +16,7 @@ const generic = {
 };
 
 const tools = {
-  count: 4,
+  count: 3,
   radius: 10,
   size: 3.25,
   startAngle: 30,

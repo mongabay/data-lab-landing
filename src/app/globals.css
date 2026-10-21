@@ -30,11 +30,9 @@
   --color-earth-atlas: var(--earth-atlas);
   --color-fire-weather: var(--fire-weather);
   --color-reforestation-app: var(--reforestation-app);
-  --color-trade-flow: var(--trade-flow);
   --color-earth-atlas-dark: var(--earth-atlas-dark);
   --color-fire-weather-dark: var(--fire-weather-dark);
   --color-reforestation-app-dark: var(--reforestation-app-dark);
-  --color-trade-flow-dark: var(--trade-flow-dark);
   --color-earth-index: var(--earth-index);
   --color-earth-index-dark: var(--earth-index-dark);
 
@@ -98,9 +96,6 @@
 
   --reforestation-app: #03755e;
   --reforestation-app-dark: #004b3c;
-
-  --trade-flow: #7e56d8;
-  --trade-flow-dark: #4a22a5;
 
   --earth-index: #9c60ff;
   --earth-index-dark: #6a2fd6;
