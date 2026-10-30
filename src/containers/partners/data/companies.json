@@ -12,5 +12,13 @@
     "image": "/images/wri-logo.png",
     "imageWidth": 241,
     "imageHeight": 88
+  },
+  {
+    "name": "Earth Genome",
+    "link": "https://www.earthgenome.org/",
+    "image": "/images/partners/earth-genome.png",
+    "imageWidth": 200,
+    "imageHeight": 72,
+    "style": { "filter": "grayscale(1)" }
   }
 ]
